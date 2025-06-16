@@ -893,7 +893,7 @@
   .trust-card {
     text-align: center;
     padding: 2.5rem 2rem;
-    background: var(--white);
+    background: rgba(37, 99, 235, 0.1);
     border-radius: 16px;
     box-shadow: var(--shadow-md);
     transition: all var(--transition-normal);
@@ -914,6 +914,10 @@
     animation: iconBounce 2s ease-in-out infinite;
   }
   
+  .trust-card p {
+    text-align: center;
+  }
+  
   @keyframes iconBounce {
     0%, 100% {
       transform: translateY(0px);
@@ -924,7 +928,7 @@
   }
   
   .trust-card h4 {
-    color: var(--primary-color);
+    color: var(--secondary-color);
     margin-bottom: 1rem;
   }
   
@@ -941,12 +945,11 @@
   
   .achievement-card {
     text-align: center;
-    padding: 1.5rem;
-    background: var(--white);
+    padding: 1rem;
+    background: rgba(245, 158, 11, 0.1);
     border-radius: 12px;
     box-shadow: var(--shadow-md);
     transition: all var(--transition-normal);
-    cursor: pointer;
   }
   
   .achievement-card:hover {
@@ -960,9 +963,13 @@
     border-radius: 8px;
     margin-bottom: 1rem;
   }
+
+  .achievement-card-horizontal img {
+    cursor: pointer;
+  }
   
   .achievement-card h5 {
-    color: var(--primary-color);
+    color: var(--gray-800);
     font-size: 1rem;
     margin: 0;
   }
@@ -1317,6 +1324,14 @@
     .tech-item {
         min-width: 100px;
         padding: 0.8rem 0.5rem;
+    }
+  
+    .achievement-card {
+      padding: 1rem 4rem;
+    }
+
+    .achievement-card-horizontal {
+      padding: 1rem;
     }
     
     .clients-grid {
