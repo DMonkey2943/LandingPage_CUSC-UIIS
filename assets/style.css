@@ -560,7 +560,7 @@
   
   .model-display {
     position: relative;
-    min-height: 400px;
+    min-height: 500px;
     background: var(--white);
     border-radius: 16px;
     box-shadow: var(--shadow-lg);
