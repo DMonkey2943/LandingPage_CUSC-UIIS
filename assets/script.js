@@ -76,25 +76,25 @@ document.addEventListener("DOMContentLoaded", () => {
   // ===================================
   // 4. TYPEWRITER EFFECT FOR HERO TITLE
   // ===================================
-  const typewriterElement = document.getElementById("typewriter");
-  if (typewriterElement) {
-    const typed = new Typed("#typewriter", {
-      strings: ["Hệ thống tích hợp Quản lý đào tạo CUSC-UIIS"],
-      typeSpeed: 50, // tốc độ gõ (ms)
-      backSpeed: 30,
-      loop: false,
-      showCursor: true,
-      cursorChar: "|",
-      smartBackspace: false,  // không cần thông minh xóa
-      backDelay: 999999, // delay dài để chắc chắn không xóa
-      onComplete: () => {
-        // Hide cursor after completion
-        setTimeout(() => {
-          document.querySelector(".typed-cursor").style.display = "none";
-        }, 2000);
-      },
-    });
-  }
+  // const typewriterElement = document.getElementById("typewriter");
+  // if (typewriterElement) {
+  //   const typed = new Typed("#typewriter", {
+  //     strings: ["Hệ thống tích hợp Quản lý đào tạo CUSC-UIIS"],
+  //     typeSpeed: 50, // tốc độ gõ (ms)
+  //     backSpeed: 30,
+  //     loop: false,
+  //     showCursor: true,
+  //     cursorChar: "|",
+  //     smartBackspace: false,  // không cần thông minh xóa
+  //     backDelay: 999999, // delay dài để chắc chắn không xóa
+  //     onComplete: () => {
+  //       // Hide cursor after completion
+  //       setTimeout(() => {
+  //         document.querySelector(".typed-cursor").style.display = "none";
+  //       }, 2000);
+  //     },
+  //   });
+  // }
 
   // ===================================
   // 5. COUNTER ANIMATION FOR STATS

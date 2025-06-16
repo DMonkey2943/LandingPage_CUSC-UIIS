@@ -85,7 +85,12 @@
   
   p {
     margin-bottom: 1rem;
-    font-size: 1rem;
+    font-size: 1rem;    
+    text-align: justify;
+  }
+
+  .nowrap {
+    white-space: nowrap;
   }
   
   .section-title {
@@ -237,6 +242,7 @@
      5. HERO SECTION
      ================================= */
   .hero-section {
+    margin-top: 82px;
     position: relative;
     min-height: 100vh;
     display: flex;
@@ -282,29 +288,30 @@
     font-size: 2rem;
     opacity: 0.6;
     animation: float 6s ease-in-out infinite;
+    z-index: 1;
   }
   
   .floating-icon:nth-child(1) {
-    top: 20%;
-    left: 10%;
+    top: 15%;
+    left: 30%;
     animation-delay: 0s;
   }
   
   .floating-icon:nth-child(2) {
-    top: 60%;
+    top: 80%;
     left: 85%;
     animation-delay: 1.5s;
   }
   
   .floating-icon:nth-child(3) {
     top: 80%;
-    left: 20%;
+    left: 15%;
     animation-delay: 3s;
   }
   
   .floating-icon:nth-child(4) {
-    top: 30%;
-    left: 80%;
+    top: 20%;
+    left: 70%;
     animation-delay: 4.5s;
   }
   
@@ -322,13 +329,13 @@
   }
   
   .hero-title {
-    color: var(--neutral-dark);
+    color: var(--primary-color);
     margin-bottom: 1rem;
     font-weight: 700;
   }
   
   .hero-subtitle {
-    color: var(--primary-color);
+    color: var(--secondary-color);
     font-size: 1.5rem;
     font-weight: 600;
     margin-bottom: 1.5rem;
