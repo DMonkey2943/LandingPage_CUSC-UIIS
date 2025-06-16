@@ -695,8 +695,8 @@
   
   .benefit-card {
     text-align: center;
-    padding: 2.5rem 2rem;
-    background: var(--white);
+    padding: 2rem 1.8rem;
+    background: var(--gray-100);
     border-radius: 16px;
     box-shadow: var(--shadow-md);
     transition: all var(--transition-normal);
@@ -729,7 +729,7 @@
   
   .benefit-list li {
     padding: 0.5rem 0;
-    color: var(--gray-600);
+    color: var(--gray-800);
     display: flex;
     align-items: center;
     gap: 0.5rem;
