@@ -19,6 +19,8 @@
         rel="stylesheet">
     <!-- AOS Animation -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/style.css">
 </head>
@@ -351,105 +353,114 @@
     </section>
 
     <!-- CÔNG NGHỆ, BẢO MẬT, HỖ TRỢ -->
-    <section class="tech-section py-5">
+    <section class="technology-section py-5">
         <div class="container">
             <div class="row">
-                <div class="col-12" data-aos="fade-up">
-                    <ul class="nav nav-tabs tech-tabs justify-content-center mb-4" role="tablist">
-                        <li class="nav-item">
-                            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tech-tab">
-                                💻 Công nghệ
-                            </button>
-                        </li>
-                        <li class="nav-item">
-                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#security-tab">
-                                🔒 Bảo mật
-                            </button>
-                        </li>
-                        <li class="nav-item">
-                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#support-tab">
-                                🤝 Hỗ trợ
-                            </button>
-                        </li>
-                    </ul>
-
-                    <div class="tab-content">
-                        <div class="tab-pane fade show active" id="tech-tab">
-                            <div class="tech-content">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title text-white">Công nghệ, Bảo mật & Hỗ trợ</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="tech-tabs">
+                        <ul class="nav nav-tabs justify-content-center" role="tablist">
+                            <li class="nav-item">
+                                <button class="nav-link active" id="nav-tech-tab" data-bs-toggle="tab" data-bs-target="#nav-tech" type="button" role="tab" aria-controls="nav-tech" aria-selected="true">
+                                    <i class="fas fa-code"></i> Công nghệ
+                                </button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="nav-link" id="nav-security-tab" data-bs-toggle="tab" data-bs-target="#nav-security" type="button" role="tab" aria-controls="nav-security" aria-selected="false">
+                                    <i class="fas fa-shield-alt"></i> Bảo mật
+                                </button>
+                            </li>
+                            <li class="nav-item">
+                                <button class="nav-link" id="nav-support-tab" data-bs-toggle="tab" data-bs-target="#nav-support" type="button" role="tab" aria-controls="nav-support" aria-selected="false">
+                                    <i class="fas fa-headset"></i> Hỗ trợ
+                                </button>
+                            </li>
+                        </ul>
+    
+                        <div class="tab-content">
+                            <div class="tab-pane fade show active" id="nav-tech" role="tabpanel" aria-labelledby="nav-tech-tab" tabindex="0">
                                 <div class="row">
-                                    <div class="col-md-6">
-                                        <h4>Tech Stack</h4>
-                                        <div class="tech-stack">
-                                            <span class="tech-badge">PHP</span>
-                                            <span class="tech-badge">MySQL</span>
-                                            <span class="tech-badge">HTML5</span>
-                                            <span class="tech-badge">JavaScript</span>
+                                    <div class="col-xxl-6 col-xl-7 d-flex justify-content-center align-items-center">
+                                        <div class="tech-stack mb-4 mb-xl-0">
+                                            <div class="tech-item">
+                                                <i class="fab fa-php"></i>
+                                                <span>PHP</span>
+                                            </div>
+                                            <div class="tech-item">
+                                                <i class="fas fa-database"></i>
+                                                <span>MySQL</span>
+                                            </div>
+                                            <div class="tech-item">
+                                                <i class="fab fa-html5"></i>
+                                                <span>HTML5</span>
+                                            </div>
+                                            <div class="tech-item">
+                                                <i class="fab fa-js-square"></i>
+                                                <span>JavaScript</span>
+                                            </div>
                                         </div>
-                                        <ul class="tech-features">
-                                            <li>Nền tảng web-based, hỗ trợ Unicode tiếng Việt</li>
-                                            <li>Kiến trúc phân tầng, dễ tích hợp</li>
-                                        </ul>
                                     </div>
-                                    <div class="col-md-6">
-                                        <h4>Đa nền tảng</h4>
+                                    <div class="col-xxl-6 col-xl-5">
                                         <ul class="tech-features">
-                                            <li>Hỗ trợ Windows, Linux, macOS</li>
-                                            <li>Responsive trên mọi thiết bị</li>
+                                            <li>Nền tảng web-based, hỗ trợ Unicode đầy đủ</li>
+                                            <li>Kiến trúc phân tầng, dễ dàng tích hợp mở rộng</li>
                                             <li>Tối ưu hiệu suất cao</li>
+                                            <li>Hỗ trợ đa nền tảng: Windows, Linux, macOS</li>
+                                            <li>Giao diện responsive trên mọi thiết bị</li>
                                         </ul>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="tab-pane fade" id="security-tab">
-                            <div class="security-content">
+    
+                            <div class="tab-pane fade" id="nav-security" role="tabpanel" aria-labelledby="nav-security-tab" tabindex="0">
                                 <div class="row">
-                                    <div class="col-md-4">
+                                    <div class="col-lg-4">
                                         <div class="security-item">
-                                            <div class="security-icon">🛡️</div>
+                                            <i class="fas fa-user-shield"></i>
                                             <h5>Phân quyền chi tiết</h5>
                                             <p>Hệ thống phân quyền đa cấp, bảo mật thông tin</p>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-lg-4">
                                         <div class="security-item">
-                                            <div class="security-icon">🔄</div>
+                                            <i class="fas fa-sync-alt"></i>
                                             <h5>Backup tự động</h5>
-                                            <p>Sao lưu dữ liệu định kỳ, đảm bảo an toàn</p>
+                                            <p>Sao lưu dữ liệu tự động, đảm bảo an toàn</p>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-lg-4">
                                         <div class="security-item">
-                                            <div class="security-icon">🚫</div>
+                                            <i class="fas fa-ban"></i>
                                             <h5>Chống tấn công DDOS</h5>
-                                            <p>Bảo vệ hệ thống khỏi các cuộc tấn công</p>
+                                            <p>Hệ thống bảo vệ chống các cuộc tấn công mạng</p>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-
-                        <div class="tab-pane fade" id="support-tab">
-                            <div class="support-content">
+    
+                            <div class="tab-pane fade" id="nav-support" role="tabpanel" aria-labelledby="nav-support-tab" tabindex="0">
                                 <div class="row">
-                                    <div class="col-md-4">
+                                    <div class="col-lg-4">
                                         <div class="support-item">
-                                            <div class="support-icon">📚</div>
+                                            <i class="fas fa-graduation-cap"></i>
                                             <h5>Đào tạo toàn diện</h5>
-                                            <p>Hướng dẫn sử dụng chi tiết, đào tạo người dùng</p>
+                                            <p>Đào tạo chi tiết cho tất cả người dùng</p>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-lg-4">
                                         <div class="support-item">
-                                            <div class="support-icon">⏰</div>
+                                            <i class="fas fa-clock"></i>
                                             <h5>Hỗ trợ 24/7</h5>
                                             <p>Đội ngũ kỹ thuật sẵn sàng hỗ trợ mọi lúc</p>
                                         </div>
                                     </div>
-                                    <div class="col-md-4">
+                                    <div class="col-lg-4">
                                         <div class="support-item">
-                                            <div class="support-icon">🔧</div>
+                                            <i class="fas fa-tools"></i>
                                             <h5>Bảo hành 12 tháng</h5>
                                             <p>Cam kết bảo hành và nâng cấp miễn phí</p>
                                         </div>

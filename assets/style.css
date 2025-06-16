@@ -285,7 +285,7 @@
   
   .floating-icon {
     position: absolute;
-    font-size: 2rem;
+    font-size: 4rem;
     opacity: 0.6;
     animation: float 6s ease-in-out infinite;
     z-index: 1;
@@ -738,116 +738,148 @@
   /* ===================================
      10. TECH SECTION
      ================================= */
-  .tech-section {
-    padding: var(--section-padding);
-    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-    color: var(--white);
-    position: relative;
+     .technology-section {
+      padding: var(--section-padding);
+      background: linear-gradient(135deg, var(--neutral-dark) 0%, #0F172A 100%);
+      position: relative;
+      overflow: hidden;
   }
   
-  .tech-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: 
-      radial-gradient(circle at 25% 25%, rgba(255, 255, 255, 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 75% 75%, rgba(255, 255, 255, 0.1) 0%, transparent 50%);
+  .technology-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: 
+          radial-gradient(circle at 25% 25%, rgba(37, 99, 235, 0.1) 0%, transparent 50%),
+          radial-gradient(circle at 75% 75%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);
+      z-index: 0;
   }
   
   .tech-tabs {
-    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+      position: relative;
+      z-index: 1;
+  }
+  
+  .tech-tabs .nav-tabs {
+      border: none;
+      margin-bottom: 3rem;
   }
   
   .tech-tabs .nav-link {
-    background: transparent;
-    border: 2px solid rgba(255, 255, 255, 0.3);
-    color: rgba(255, 255, 255, 0.8);
-    border-radius: 8px;
-    margin: 0 0.5rem;
-    padding: 1rem 1.5rem;
-    font-weight: 600;
-    transition: all var(--transition-normal);
+      background: rgba(255, 255, 255, 0.1);
+      border: 2px solid transparent;
+      color: var(--white);
+      padding: 1rem 2rem;
+      margin: 0 0.5rem;
+      border-radius: 10px;
+      transition: var(--transition-smooth);
+      backdrop-filter: blur(10px);
   }
   
-  .tech-tabs .nav-link:hover,
+  .tech-tabs .nav-link:hover {
+      background: rgba(255, 255, 255, 0.2);
+      border-color: var(--primary-color);
+  }
+  
   .tech-tabs .nav-link.active {
-    background: var(--white);
-    color: var(--primary-color);
-    border-color: var(--white);
-    transform: translateY(-2px);
+      background: var(--primary-color);
+      border-color: var(--primary-color);
+      color: var(--white);
+  }
+  
+  .tech-tabs .nav-link i {
+      margin-right: 0.5rem;
+      font-size: 1.2rem;
   }
   
   .tab-content {
-    padding: 3rem 0;
-  }
-  
-  .tech-content,
-  .security-content,
-  .support-content {
-    position: relative;
-    z-index: 1;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 3rem;
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
   }
   
   .tech-stack {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5rem;
-    margin-bottom: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1.5rem;
   }
   
-  .tech-badge {
-    background: rgba(255, 255, 255, 0.2);
-    color: var(--white);
-    padding: 0.5rem 1rem;
-    border-radius: 20px;
-    font-weight: 500;
-    font-size: 0.875rem;
+  .tech-item {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1rem;
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      transition: var(--transition-smooth);
+      min-width: 120px;
+  }
+  
+  .tech-item:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: translateY(-5px);
+  }
+  
+  .tech-item i {
+      font-size: 3rem;
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+  }
+  
+  .tech-item span {
+      color: var(--white);
+      font-weight: 500;
   }
   
   .tech-features {
-    list-style: none;
-    padding: 0;
+      list-style: none;
+      padding: 0;
   }
   
   .tech-features li {
-    padding: 0.5rem 0;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
+      color: var(--white);
+      margin-bottom: 1rem;
+      padding-left: 2rem;
+      position: relative;
+      opacity: 0.9;
   }
   
   .tech-features li::before {
-    content: '✓';
-    color: var(--secondary-color);
-    font-weight: bold;
+      content: '✓';
+      position: absolute;
+      left: 0;
+      color: var(--secondary-color);
+      font-weight: bold;
+      font-size: 1.2rem;
   }
   
-  .security-item,
-  .support-item {
-    text-align: center;
-    padding: 2rem 1rem;
+  .security-item, .support-item {
+      text-align: center;
+      padding: 2rem 1rem;
   }
   
-  .security-icon,
-  .support-icon {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-    display: block;
+  .security-item i, .support-item i {
+      font-size: 3rem;
+      color: var(--accent-color);
+      margin-bottom: 1rem;
+      display: block;
   }
   
-  .security-item h5,
-  .support-item h5 {
-    margin-bottom: 1rem;
-    color: var(--white);
+  .security-item h5, .support-item h5 {
+      color: var(--white);
+      margin-bottom: 1rem;
   }
   
-  .security-item p,
-  .support-item p {
-    color: rgba(255, 255, 255, 0.8);
-    margin: 0;
+  .security-item p, .support-item p {
+      color: var(--white);
+      opacity: 0.8;
+      margin: 0;
+      text-align: center;
   }
   
   /* ===================================
@@ -1189,6 +1221,12 @@
   /* ===================================
      15. RESPONSIVE DESIGN
      ================================= */
+  @media (max-width: 1200px) {
+    .tech-stack {
+        justify-content: center;
+    }
+  }
+
   @media (max-width: 991.98px) {
     .hero-buttons {
       justify-content: center;
@@ -1209,10 +1247,6 @@
     
     .features-group {
       margin-top: 2rem;
-    }
-    
-    .tech-tabs .nav-link {
-      margin-bottom: 0.5rem;
     }
     
     .consultant-info {
@@ -1266,6 +1300,25 @@
       font-size: 1.25rem;
     }
     
+    .tech-tabs .nav-link {
+        padding: 0.75rem 1rem;
+        margin: 0.25rem;
+        font-size: 0.9rem;
+    }
+    
+    .tab-content {
+        padding: 2rem 1rem;
+    }
+    
+    .tech-stack {
+        gap: 1rem;
+    }
+    
+    .tech-item {
+        min-width: 100px;
+        padding: 0.8rem 0.5rem;
+    }
+    
     .clients-grid {
       grid-template-columns: repeat(2, 1fr);
       gap: 1rem;
@@ -1299,12 +1352,6 @@
     .clients-grid {
       grid-template-columns: 1fr;
     }
-    
-    .tech-tabs .nav-link {
-      padding: 0.75rem 1rem;
-      font-size: 0.875rem;
-    }
-  }
   
   /* ===================================
      16. ANIMATIONS & UTILITIES
@@ -1394,3 +1441,4 @@
       box-shadow: none !important;
     }
   }
+}
