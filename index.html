@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CUSC-UIIS - Hệ thống tích hợp quản lý đào tạo</title>
+    <meta name="description"
+        content="Giải pháp chuyển đổi số toàn diện cho giáo dục. Hệ thống quản lý đào tạo CUSC-UIIS được 30+ trường đại học tin dùng.">
+    <meta name="keywords" content="quản lý đào tạo, hệ thống giáo dục, CUSC, chuyển đổi số, đại học">
+
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Open+Sans:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="assets/style.css">
+</head>
+
+<body>
+    <!-- HEADER/NAVIGATION -->
+    <header class="navbar navbar-expand-lg fixed-top" id="mainNavbar">
+        <div class="container">
+            <a class="navbar-brand" href="#home">
+                <img src="assets/img/CUSC_Logo.png" alt="CUSC Logo" class="logo">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about">Giới thiệu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#model">Mô hình</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Tính năng</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#benefits">Lợi ích</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#trust">Uy tín</a>
+                    </li>
+                </ul>
+                <button class="btn btn-cta" data-bs-toggle="modal" data-bs-target="#contactModal">
+                    Liên hệ tư vấn
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section id="home" class="hero-section">
+        <div class="hero-background">
+            <div class="floating-icons">
+                <div class="floating-icon" data-icon="📚"></div>
+                <div class="floating-icon" data-icon="🎓"></div>
+                <div class="floating-icon" data-icon="📊"></div>
+                <div class="floating-icon" data-icon="💻"></div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row align-items-center min-vh-100">
+                <div class="col-lg-6" data-aos="fade-right">
+                    <h1 class="hero-title">
+                        <!-- Hệ thống tích hợp Quản lý đào tạo CUSC-UIIS -->
+                        <span id="typewriter"></span>
+                    </h1>
+                    <h2 class="hero-subtitle">Giải pháp chuyển đổi số toàn diện cho giáo dục</h2>
+                    <p class="hero-description">
+                        Tăng hiệu quả quản lý, tối ưu hóa quy trình đào tạo với công nghệ hiện đại.
+                        Được tin dùng bởi hơn 30 trường đại học và cao đẳng trên toàn quốc.
+                    </p>
+                    <div class="hero-buttons">
+                        <button class="btn btn-primary btn-lg me-3" data-bs-toggle="modal"
+                            data-bs-target="#contactModal">
+                            Liên hệ tư vấn
+                        </button>
+                        <button class="btn btn-outline-primary btn-lg" data-bs-toggle="modal"
+                            data-bs-target="#contactModal">
+                            Xem demo
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="hero-visual">
+                        <img src="assets/img/giao-dien-htql.png" alt="CUSC-UIIS Dashboard" class="img-fluid hero-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- GIỚI THIỆU + TỔNG QUAN -->
+    <section id="about" class="about-section py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5" data-aos="fade-right">
+                    <h2 class="section-title">Giới thiệu CUSC-UIIS</h2>
+                    <div class="highlight-box">
+                        <p class="highlight-text">
+                            Phát triển bởi Trung tâm Công nghệ Phần mềm Đại học Cần Thơ,
+                            CUSC-UIIS là giải pháp chuyển đổi số toàn diện cho các trường Đại học, Cao đẳng.
+                        </p>
+                    </div>
+
+                    <div class="key-features">
+                        <div class="feature-item">
+                            <span class="feature-icon">🎯</span>
+                            <span>Hơn 40 modules quản lý xuyên suốt quy trình đào tạo</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🏫</span>
+                            <span>Hỗ trợ đa bậc: Trung cấp, Cao đẳng, Đại học, Sau đại học</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">📱</span>
+                            <span>Truy cập mọi lúc, mọi nơi qua web/mobile</span>
+                        </div>
+                        <div class="feature-item">
+                            <span class="feature-icon">🔗</span>
+                            <span>Tích hợp hệ thống quốc gia (HEMIS, LGSP)</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="stats-container">
+                        <img src="assets/img/Quy-trinh.png" alt="System Overview" class="img-fluid mb-4">
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="stat-card">
+                                    <h3 class="stat-number" data-count="50000">0</h3>
+                                    <p class="stat-label">Sinh viên</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="stat-card">
+                                    <h3 class="stat-number" data-count="5000">0</h3>
+                                    <p class="stat-label">Lớp học</p>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="stat-card">
+                                    <h3 class="stat-number" data-count="2000">0</h3>
+                                    <p class="stat-label">Cán bộ, Giảng viên</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- MÔ HÌNH TỔNG QUAN -->
+    <section id="model" class="model-section py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-up">Mô hình Tổng quan</h2>
+            <div class="row">
+                <div class="col-lg-4" data-aos="fade-right">
+                    <div class="model-controls">
+                        <button class="model-btn active" data-target="overview">
+                            <span class="model-icon">🏢</span>
+                            <span>Mô hình Tổng quan</span>
+                        </button>
+                        <button class="model-btn" data-target="admission">
+                            <span class="model-icon">🎓</span>
+                            <span>Tuyển sinh, Quản lý Sinh viên</span>
+                        </button>
+                        <button class="model-btn" data-target="training">
+                            <span class="model-icon">📚</span>
+                            <span>Đào tạo, Nghiên cứu Khoa học</span>
+                        </button>
+                        <button class="model-btn" data-target="finance">
+                            <span class="model-icon">💰</span>
+                            <span>Tài chính</span>
+                        </button>
+                        <button class="model-btn" data-target="operation">
+                            <span class="model-icon">⚙️</span>
+                            <span>Điều hành, Hoạt động chuyên môn</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="col-lg-8" data-aos="fade-left">
+                    <div class="model-display">
+                        <div class="model-content active" id="overview">
+                            <img src="assets/img/mo-hinh-tong-quan.png" alt="Mô hình tổng quan" class="img-fluid">
+                        </div>
+                        <div class="model-content" id="admission">
+                            <img src="assets/img/cong-tac-tuyen-sinh-quan-ly-sv.png" alt="Tuyển sinh" class="img-fluid">
+                        </div>
+                        <div class="model-content" id="training">
+                            <img src="assets/img/cong-tac-dao-tao-nckh.png" alt="Đào tạo" class="img-fluid">
+                        </div>
+                        <div class="model-content" id="finance">
+                            <img src="assets/img/cong-tac-tai-chinh.png" alt="Tài chính" class="img-fluid">
+                        </div>
+                        <div class="model-content" id="operation">
+                            <img src="assets/img/cong-tac-dieu-hanh-va-hd-chuyen-mon.png" alt="Điều hành"
+                                class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TÍNH NĂNG NỔI BẬT -->
+    <section id="features" class="features-section py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-up">Tính năng nổi bật</h2>
+
+            <!-- Feature Row 1 -->
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-5" data-aos="fade-right">
+                    <div class="mobile-mockup">
+                        <img src="assets/img/ung-dung-di-dong.png" alt="Mobile App" class="img-fluid">
+                    </div>
+                </div>
+                <div class="col-lg-7" data-aos="fade-left">
+                    <div class="features-group">
+                        <div class="feature-card">
+                            <div class="feature-icon-lg">📱</div>
+                            <h4>Mobile App (iOS & Android)</h4>
+                            <p>Ứng dụng di động đầy đủ tính năng, truy cập mọi lúc mọi nơi</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon-lg">🔐</div>
+                            <h4>Đăng nhập một lần (SSO)</h4>
+                            <p>Tích hợp hệ thống xác thực tập trung, bảo mật cao</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon-lg">💳</div>
+                            <h4>Thanh toán Online</h4>
+                            <p>Hỗ trợ đa dạng phương thức thanh toán điện tử</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature Row 2 -->
+            <div class="row align-items-center">
+                <div class="col-lg-7 order-lg-1 order-2" data-aos="fade-right">
+                    <div class="features-group">
+                        <div class="feature-card">
+                            <div class="feature-icon-lg">📊</div>
+                            <h4>Dashboard trực quan</h4>
+                            <p>Giao diện thân thiện, báo cáo thống kê chi tiết</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon-lg">🔗</div>
+                            <h4>Tích hợp HEMIS & LGSP</h4>
+                            <p>Kết nối liền mạch với hệ thống quốc gia</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon-lg">🧾</div>
+                            <h4>Hóa đơn điện tử</h4>
+                            <p>Tuân thủ quy định pháp luật về hóa đơn điện tử</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon-lg">⚡</div>
+                            <h4>Mở rộng linh hoạt</h4>
+                            <p>Kiến trúc module hóa, dễ dàng tùy chỉnh</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5 order-lg-2 order-1" data-aos="fade-left">
+                    <div class="dashboard-mockup">
+                        <img src="assets/img/dashboard.png" alt="Dashboard" class="img-fluid">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- LỢI ÍCH/HIỆU QUẢ -->
+    <section id="benefits" class="benefits-section py-5">
+        <div class="container">
+            <h2 class="section-title text-center mb-5" data-aos="fade-up">Lợi ích cho từng đối tượng</h2>
+            <div class="row">
+                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">🏢</div>
+                        <h4>Nhà trường</h4>
+                        <ul class="benefit-list">
+                            <li>⚡ Nâng cao hiệu quả công việc</li>
+                            <li>📊 Báo cáo thống kê chính xác</li>
+                            <li>💰 Tiết kiệm chi phí vận hành</li>
+                            <li>🤖 Giảm thủ tục hành chính</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">👨‍🏫</div>
+                        <h4>Giảng viên</h4>
+                        <ul class="benefit-list">
+                            <li>📈 Theo dõi tiến độ sinh viên</li>
+                            <li>📅 Chủ động sắp xếp lịch dạy</li>
+                            <li>💻 Nhập điểm online tiện lợi</li>
+                            <li>📋 Quản lý tài liệu dễ dàng</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="benefit-card">
+                        <div class="benefit-icon">🎓</div>
+                        <h4>Sinh viên</h4>
+                        <ul class="benefit-list">
+                            <li>📋 Chủ động lập kế hoạch học tập</li>
+                            <li>⏰ Lựa chọn lịch học phù hợp</li>
+                            <li>📊 Theo dõi kết quả real-time</li>
+                            <li>🎯 Rèn luyện tính chủ động</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CÔNG NGHỆ, BẢO MẬT, HỖ TRỢ -->
+    <section class="tech-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12" data-aos="fade-up">
+                    <ul class="nav nav-tabs tech-tabs justify-content-center mb-4" role="tablist">
+                        <li class="nav-item">
+                            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#tech-tab">
+                                💻 Công nghệ
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#security-tab">
+                                🔒 Bảo mật
+                            </button>
+                        </li>
+                        <li class="nav-item">
+                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#support-tab">
+                                🤝 Hỗ trợ
+                            </button>
+                        </li>
+                    </ul>
+
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="tech-tab">
+                            <div class="tech-content">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <h4>Tech Stack</h4>
+                                        <div class="tech-stack">
+                                            <span class="tech-badge">PHP</span>
+                                            <span class="tech-badge">MySQL</span>
+                                            <span class="tech-badge">HTML5</span>
+                                            <span class="tech-badge">JavaScript</span>
+                                        </div>
+                                        <ul class="tech-features">
+                                            <li>Nền tảng web-based, hỗ trợ Unicode tiếng Việt</li>
+                                            <li>Kiến trúc phân tầng, dễ tích hợp</li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <h4>Đa nền tảng</h4>
+                                        <ul class="tech-features">
+                                            <li>Hỗ trợ Windows, Linux, macOS</li>
+                                            <li>Responsive trên mọi thiết bị</li>
+                                            <li>Tối ưu hiệu suất cao</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="security-tab">
+                            <div class="security-content">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="security-item">
+                                            <div class="security-icon">🛡️</div>
+                                            <h5>Phân quyền chi tiết</h5>
+                                            <p>Hệ thống phân quyền đa cấp, bảo mật thông tin</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="security-item">
+                                            <div class="security-icon">🔄</div>
+                                            <h5>Backup tự động</h5>
+                                            <p>Sao lưu dữ liệu định kỳ, đảm bảo an toàn</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="security-item">
+                                            <div class="security-icon">🚫</div>
+                                            <h5>Chống tấn công DDOS</h5>
+                                            <p>Bảo vệ hệ thống khỏi các cuộc tấn công</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="support-tab">
+                            <div class="support-content">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="support-item">
+                                            <div class="support-icon">📚</div>
+                                            <h5>Đào tạo toàn diện</h5>
+                                            <p>Hướng dẫn sử dụng chi tiết, đào tạo người dùng</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="support-item">
+                                            <div class="support-icon">⏰</div>
+                                            <h5>Hỗ trợ 24/7</h5>
+                                            <p>Đội ngũ kỹ thuật sẵn sàng hỗ trợ mọi lúc</p>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="support-item">
+                                            <div class="support-icon">🔧</div>
+                                            <h5>Bảo hành 12 tháng</h5>
+                                            <p>Cam kết bảo hành và nâng cấp miễn phí</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- UY TÍN -->
+    <section id="trust" class="trust-section py-5">
+        <div class="container">
+            <!-- Tại sao chọn CUSC -->
+            <div class="row mb-5">
+                <div class="col-12" data-aos="fade-up">
+                    <h2 class="section-title text-center mb-5">Tại sao chọn CUSC?</h2>
+                </div>
+                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="trust-card">
+                        <div class="trust-icon">💡</div>
+                        <h4>Am hiểu</h4>
+                        <p>Am hiểu nghiệp vụ giáo dục, phát triển từ thực tiễn</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="trust-card">
+                        <div class="trust-icon">⚙️</div>
+                        <h4>Linh hoạt</h4>
+                        <p>Hệ thống tùy biến, module hóa theo nhu cầu</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="trust-card">
+                        <div class="trust-icon">🚀</div>
+                        <h4>Phát triển</h4>
+                        <p>Tích hợp không giới hạn, liên tục cải tiến</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Thành tựu & Chứng nhận -->
+            <div class="achievements-section">
+                <h3 class="text-center mb-4" data-aos="fade-up">Thành tựu & Chứng nhận</h3>
+                <div class="row mb-4">
+                    <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="100">
+                        <div class="achievement-card">
+                            <img src="assets/img/giai-thuong-sao-khue.png" alt="Giải thưởng Sao Khuê 2009"
+                                class="img-fluid">
+                            <h5>Giải thưởng Sao Khuê 2009</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="200">
+                        <div class="achievement-card">
+                            <img src="assets/img/chung-nhan-chuyen-doi-so.png" alt="Chuyển đổi số VN 2022"
+                                class="img-fluid">
+                            <h5>Chuyển đổi số VN 2022</h5>
+                        </div>
+                    </div>
+                    <div class="col-md-4 mb-3" data-aos="fade-up" data-aos-delay="300">
+                        <div class="achievement-card">
+                            <img src="assets/img/chung-nhan-top-10.png" alt="Top 10 CNTT VN 2022" class="img-fluid">
+                            <h5>Top 10 CNTT VN 2022</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12" data-aos="fade-up">
+                        <div class="achievement-card">
+                            <img src="assets/img/dat-tieu-chi-uu-tien-mua-sam.png" alt="Xác nhận Bộ TT&TT"
+                                class="img-fluid">
+                            <h5>Xác nhận Bộ Thông tin và Truyền thông</h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KHÁCH HÀNG TIÊU BIỂU -->
+    <section class="clients-section py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center" data-aos="fade-up">
+                    <h2 class="section-title">Đồng hành cùng 30+ trường Đại học, Cao đẳng</h2>
+                    <p class="section-subtitle">Phục vụ hàng trăm nghìn sinh viên toàn quốc</p>
+                </div>
+            </div>
+
+            <div class="clients-grid" data-aos="fade-up" data-aos-delay="200">
+                <div class="client-logo">
+                    <img src="assets/img/logo-ctu.png" alt="ĐH Cần Thơ" class="img-fluid">
+                </div>
+                <div class="client-logo">
+                    <img src="assets/img/logo-ctu.png" alt="ĐH Y Dược Huế" class="img-fluid">
+                </div>
+                <div class="client-logo">
+                    <img src="assets/img/logo-ctu.png" alt="ĐH Nha Trang" class="img-fluid">
+                </div>
+                <div class="client-logo">
+                    <img src="assets/img/logo-ctu.png" alt="ĐH Sư phạm Kỹ thuật TP.HCM" class="img-fluid">
+                </div>
+                <div class="client-logo">
+                    <img src="assets/img/logo-ctu.png" alt="CĐ Kinh tế Kỹ thuật Cần Thơ" class="img-fluid">
+                </div>
+                <div class="client-logo">
+                    <img src="assets/img/logo-ctu.png" alt="CĐ Y tế Đồng Nai" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 mb-4">
+                    <img src="assets/img/CUSC_Logo.png" alt="CUSC Logo" class="footer-logo mb-3">
+                    <h5>Trung tâm Công nghệ Phần mềm</h5>
+                    <h6>Đại học Cần Thơ</h6>
+                    <p class="footer-address">
+                        Khu II, Đại học Cần Thơ<br>
+                        Đường 3/2, P. Xuân Khánh<br>
+                        Q. Ninh Kiều, TP. Cần Thơ
+                    </p>
+                    <p class="footer-contact">
+                        <strong>Tel:</strong> (0292) 3831 301<br>
+                        <strong>Email:</strong> cusc@ctu.edu.vn
+                    </p>
+                </div>
+
+                <div class="col-lg-3 mb-4">
+                    <h5>Liên kết</h5>
+                    <div class="social-links">
+                        <a href="#" class="social-link">
+                            <span class="social-icon">📘</span> Facebook
+                        </a>
+                        <a href="#" class="social-link">
+                            <span class="social-icon">📺</span> YouTube
+                        </a>
+                        <a href="#" class="social-link">
+                            <span class="social-icon">💬</span> Zalo
+                        </a>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 mb-4">
+                    <h5>Liên hệ tư vấn</h5>
+                    <div class="consultant-info">
+                        <div class="consultant">
+                            <h6>Nguyễn Văn A</h6>
+                            <p>Chuyên viên tư vấn phần mềm</p>
+                            <p><strong>Tel:</strong> <a href="tel:0123456789">0123 456 789</a></p>
+                            <p><strong>Email:</strong> <a href="mailto:nva@ctu.edu.vn">nva@ctu.edu.vn</a></p>
+                        </div>
+                        <div class="consultant">
+                            <h6>Trần Thị B</h6>
+                            <p>Chuyên viên tư vấn phần mềm</p>
+                            <p><strong>Tel:</strong> <a href="tel:0987654321">0987 654 321</a></p>
+                            <p><strong>Email:</strong> <a href="mailto:ttb@ctu.edu.vn">ttb@ctu.edu.vn</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-3 mb-4">
+                    <h5>Thống kê</h5>
+                    <div class="stats-info">
+                        <p>Đang online: <span class="stat-highlight">12</span></p>
+                        <p>Lượt truy cập hôm nay: <span class="stat-highlight">123</span></p>
+                        <p>Tổng truy cập: <span class="stat-highlight">1,234</span></p>
+                    </div>
+                    <div class="qr-code mt-3">
+                        <img src="assets/img/qr-lien-he-tu-van.jpg" alt="QR Code Zalo" class="img-fluid">
+                        <p class="small">Quét mã QR để chat Zalo</p>
+                    </div>
+                </div>
+            </div>
+
+            <hr class="footer-divider">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="copyright">
+                        © 2024 Trung tâm Công nghệ Phần mềm - Đại học Cần Thơ. All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MODAL LIÊN HỆ TƯ VẤN -->
+    <div class="modal fade" id="contactModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Liên hệ tư vấn CUSC-UIIS</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6 mb-3">
+                            <div class="consultant-card">
+                                <div class="consultant-avatar">
+                                    <img src="assets/img/avatar_12.png" alt="Consultant 1"
+                                        class="img-fluid rounded-circle">
+                                </div>
+                                <div class="consultant-details">
+                                    <h6>Nguyễn Văn A</h6>
+                                    <p class="consultant-title">Chuyên viên tư vấn phần mềm</p>
+                                    <div class="consultant-contact">
+                                        <p><strong>Tel:</strong> <a href="tel:0123456789">0123 456 789</a></p>
+                                        <p><strong>Email:</strong> <a href="mailto:nva@ctu.edu.vn">nva@ctu.edu.vn</a>
+                                        </p>
+                                    </div>
+                                    <div class="qr-code-small">
+                                        <img src="assets/img/qr-lien-he-tu-van.jpg" alt="QR Zalo" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-6 mb-3">
+                            <div class="consultant-card">
+                                <div class="consultant-avatar">
+                                    <img src="assets/img/avatar_12.png" alt="Consultant 2"
+                                        class="img-fluid rounded-circle">
+                                </div>
+                                <div class="consultant-details">
+                                    <h6>Trần Thị B</h6>
+                                    <p class="consultant-title">Chuyên viên tư vấn phần mềm</p>
+                                    <div class="consultant-contact">
+                                        <p><strong>Tel:</strong> <a href="tel:0987654321">0987 654 321</a></p>
+                                        <p><strong>Email:</strong> <a href="mailto:ttb@ctu.edu.vn">ttb@ctu.edu.vn</a>
+                                        </p>
+                                    </div>
+                                    <div class="qr-code-small">
+                                        <img src="assets/img/qr-lien-he-tu-van.jpg" alt="QR Zalo" class="img-fluid">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary btn-lg w-100">
+                        💬 Liên hệ ngay qua Zalo
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Typed.js for typewriter effect -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <!-- Custom JS -->
+    <script src="assets/script.js"></script>
+</body>
+
+</html>
