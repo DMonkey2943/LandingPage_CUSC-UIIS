@@ -380,6 +380,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Add loaded class to body for CSS animations
   document.body.classList.add("loaded");
+
+  // Infinite Logo Carousel
+  initLogoCarousel();
 });
 
 // ===================================
@@ -467,3 +470,38 @@ const bsCollapse = new bootstrap.Collapse(
     toggle: false,
   }
 );
+
+// ===================================
+// 18. CLIENT CAROUSEL
+// ===================================
+// Infinite Logo Carousel
+function initLogoCarousel() {
+    const track = document.querySelector('.clients-track');
+    if (!track) return;
+
+    // Clone logos for seamless loop
+    const logos = track.querySelectorAll('.client-logo');
+    const totalLogos = logos.length;
+    
+    // Optimize animation performance
+    track.style.willChange = 'transform';
+    
+    // Pause animation on hover
+    track.addEventListener('mouseenter', () => {
+        track.style.animationPlayState = 'paused';
+    });
+    
+    track.addEventListener('mouseleave', () => {
+        track.style.animationPlayState = 'running';
+    });
+    
+    // Optimize for mobile devices
+    if (window.innerWidth <= 768) {
+        track.style.animationDuration = '30s';
+    }
+}
+
+// Reinitialize on window resize
+window.addEventListener('resize', debounce(() => {
+    initLogoCarousel();
+}, 250));
