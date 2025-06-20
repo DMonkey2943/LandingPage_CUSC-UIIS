@@ -643,73 +643,186 @@
     <footer class="footer py-5">
         <div class="container">
             <div class="row">
-                <div class="col-lg-3 mb-4">
-                    <img src="assets/img/CUSC_Logo.png" alt="CUSC Logo" class="footer-logo mb-3">
-                    <h5>Trung tâm Công nghệ Phần mềm</h5>
-                    <h6>Đại học Cần Thơ</h6>
-                    <p class="footer-address">
-                        Khu II, Đại học Cần Thơ<br>
-                        Đường 3/2, P. Xuân Khánh<br>
-                        Q. Ninh Kiều, TP. Cần Thơ
-                    </p>
-                    <p class="footer-contact">
-                        <strong>Tel:</strong> (0292) 3831 301<br>
-                        <strong>Email:</strong> cusc@ctu.edu.vn
-                    </p>
+                <!-- Cột 1: Thông tin CUSC -->
+                <div class="col-xl-4 col-md-8 mb-4">
+                    <div class="footer-brand">
+                        <img src="assets/img/CUSC_Logo.png" alt="CUSC Logo" class="footer-logo mb-3">
+                        <p class="mb-3" style="color: var(--accent-color);">
+                            <span class="fs-5 fw-bold">TRUNG TÂM CÔNG NGHỆ PHẦN MỀM </span>
+                            <br>TRƯỜNG ĐẠI HỌC CẦN THƠ
+                        </p>
+                    </div>
+                    <div class="footer-contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>01 Lý Tự Trọng, P.Thới Bình, Q.Ninh Kiều, TP.Cần Thơ</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <p><a href="tel:02923731072">Điện thoại: (0292) 3731072 - Fax: (0292) 3731071</a></p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <p><a href="mailto:cusc@ctu.edu.vn">cusc@ctu.edu.vn</a></p>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="col-lg-3 mb-4">
-                    <h5>Liên kết</h5>
+                <!-- Cột 2: Liên kết -->
+                <div class="col-xl-2 col-md-4 mb-4">
+                    <h5 class="footer-heading">
+                        <i class="fas fa-link"></i> Liên kết
+                    </h5>
                     <div class="social-links">
-                        <a href="#" class="social-link">
-                            <span class="social-icon">📘</span> Facebook
+                        <a href="https://www.facebook.com/cuscsoftware" class="social-link">
+                            <img src="assets/img/facebook.png" alt="">
+                            <span>Facebook</span>
                         </a>
-                        <a href="#" class="social-link">
-                            <span class="social-icon">📺</span> YouTube
+                        <a href="https://www.youtube.com/channel/UCND2Duw4gdaKPaWSiXLGu_Q" class="social-link">
+                            <img src="assets/img/youtube.png" alt="">
+                            <span>YouTube</span>
                         </a>
-                        <a href="#" class="social-link">
-                            <span class="social-icon">💬</span> Zalo
+                        <a href="https://zalo.me/4610637127320083887" class="social-link">
+                            <img src="assets/img/zalo.svg.webp" alt="">
+                            <span>Zalo</span>
                         </a>
                     </div>
                 </div>
 
-                <div class="col-lg-3 mb-4">
-                    <h5>Liên hệ tư vấn</h5>
-                    <div class="consultant-info">
-                        <div class="consultant">
-                            <h6>Nguyễn Văn A</h6>
-                            <p>Chuyên viên tư vấn phần mềm</p>
-                            <p><strong>Tel:</strong> <a href="tel:0123456789">0123 456 789</a></p>
-                            <p><strong>Email:</strong> <a href="mailto:nva@ctu.edu.vn">nva@ctu.edu.vn</a></p>
+                <!-- Cột 3: Liên hệ tư vấn -->
+                <div class="col-xl-4 col-md-8 mb-4">
+                    <h5 class="footer-heading">
+                        <i class="fas fa-headset"></i> Liên hệ tư vấn
+                    </h5>
+                    <div class="consultant-cards">
+                        <div class="consultant-card">
+                            <div class="consultant-info">
+                                <div class="consultant-details">
+                                    <div class="consultant-header">
+                                        <h6>Nguyễn Văn A</h6>
+                                        <span class="consultant-badge">Chuyên viên tư vấn</span>
+                                    </div>
+                                    <div class="consultant-contact">
+                                        <a href="tel:0123456789" class="contact-link">
+                                            <div class="contact-icon">
+                                                <i class="fas fa-phone"></i>
+                                            </div>
+                                            <div class="contact-text">
+                                                <span class="contact-label">Điện thoại</span>
+                                                <span class="contact-value">0123 456 789</span>
+                                            </div>
+                                        </a>
+                                        <a href="mailto:nva@ctu.edu.vn" class="contact-link">
+                                            <div class="contact-icon">
+                                                <i class="fas fa-envelope"></i>
+                                            </div>
+                                            <div class="contact-text">
+                                                <span class="contact-label">Email</span>
+                                                <span class="contact-value">nva@ctu.edu.vn</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="consultant-qr">
+                                    <div class="qr-wrapper">
+                                        <img src="assets/img/qr-lien-he-tu-van.jpg" alt="QR Code" class="img-fluid">
+                                        <div class="qr-overlay">
+                                            <i class="fab fa-zalo"></i>
+                                            <span>Chat Zalo</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="consultant">
-                            <h6>Trần Thị B</h6>
-                            <p>Chuyên viên tư vấn phần mềm</p>
-                            <p><strong>Tel:</strong> <a href="tel:0987654321">0987 654 321</a></p>
-                            <p><strong>Email:</strong> <a href="mailto:ttb@ctu.edu.vn">ttb@ctu.edu.vn</a></p>
+
+                        <div class="consultant-card">
+                            <div class="consultant-info">
+                                <div class="consultant-details">
+                                    <div class="consultant-header">
+                                        <h6>Trần Thị B</h6>
+                                        <span class="consultant-badge">Chuyên viên tư vấn</span>
+                                    </div>
+                                    <div class="consultant-contact">
+                                        <a href="tel:0987654321" class="contact-link">
+                                            <div class="contact-icon">
+                                                <i class="fas fa-phone"></i>
+                                            </div>
+                                            <div class="contact-text">
+                                                <span class="contact-label">Điện thoại</span>
+                                                <span class="contact-value">0987 654 321</span>
+                                            </div>
+                                        </a>
+                                        <a href="mailto:ttb@ctu.edu.vn" class="contact-link">
+                                            <div class="contact-icon">
+                                                <i class="fas fa-envelope"></i>
+                                            </div>
+                                            <div class="contact-text">
+                                                <span class="contact-label">Email</span>
+                                                <span class="contact-value">ttb@ctu.edu.vn</span>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="consultant-qr">
+                                    <div class="qr-wrapper">
+                                        <img src="assets/img/qr-lien-he-tu-van.jpg" alt="QR Code" class="img-fluid">
+                                        <div class="qr-overlay">
+                                            <i class="fab fa-zalo"></i>
+                                            <span>Chat Zalo</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="col-lg-3 mb-4">
-                    <h5>Thống kê</h5>
-                    <div class="stats-info">
-                        <p>Đang online: <span class="stat-highlight">12</span></p>
-                        <p>Lượt truy cập hôm nay: <span class="stat-highlight">123</span></p>
-                        <p>Tổng truy cập: <span class="stat-highlight">1,234</span></p>
+                <!-- Cột 4: Thống kê -->
+                <div class="col-xl-2 col-md-4 mb-4">
+                    <h5 class="footer-heading">
+                        <i class="fas fa-signal"></i> Lượt truy cập
+                    </h5>
+                    <div class="footer-stats mt-4">
+                        <div class="stat-item">
+                            <i class="fas fa-users"></i>
+                            <span>Đang online: <strong>12</strong></span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-eye"></i>
+                            <span>Hôm nay: <strong>123</strong></span>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-chart-line"></i>
+                            <span>Tổng: <strong>1,234</strong></span>
+                        </div>
                     </div>
-                    <div class="qr-code mt-3">
-                        <img src="assets/img/qr-lien-he-tu-van.jpg" alt="QR Code Zalo" class="img-fluid">
-                        <p class="small">Quét mã QR để chat Zalo</p>
-                    </div>
+                    <!-- <div class="quick-contact">
+                        <div class="qr-code-container">
+                            <img src="assets/img/qr-lien-he-tu-van.jpg" alt="QR Code Zalo" class="img-fluid">
+                            <div class="qr-overlay">
+                                <i class="fab fa-zalo"></i>
+                                <span>Chat Zalo</span>
+                            </div>
+                        </div>
+                        <div class="contact-buttons">
+                            <a href="tel:0123456789" class="contact-btn">
+                                <i class="fas fa-phone"></i>
+                                <span>Gọi ngay</span>
+                            </a>
+                            <a href="mailto:cusc@ctu.edu.vn" class="contact-btn">
+                                <i class="fas fa-envelope"></i>
+                                <span>Email</span>
+                            </a>
+                        </div>
+                    </div> -->
                 </div>
             </div>
 
             <hr class="footer-divider">
             <div class="row">
                 <div class="col-12 text-center">
-                    <p class="copyright">
-                        © 2024 Trung tâm Công nghệ Phần mềm - Đại học Cần Thơ. All rights reserved.
+                    <p class="copyright text-center">
+                        <i class="far fa-copyright"></i> 2025 Trung tâm Công nghệ Phần mềm - Đại học Cần Thơ. All rights reserved.
                     </p>
                 </div>
             </div>
