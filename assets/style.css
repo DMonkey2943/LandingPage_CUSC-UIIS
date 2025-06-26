@@ -2055,3 +2055,34 @@
       border-radius: 0;
     }
   } */
+
+  /* Scroll To Top Button */
+.scroll-to-top {
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    z-index: 999;
+    width: 48px;
+    height: 48px;
+    border: none;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color) 60%, var(--secondary-color) 100%);
+    color: #fff;
+    font-size: 1.5rem;
+    box-shadow: 0 4px 16px rgba(37,99,235,0.15);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s, transform 0.3s;
+}
+.scroll-to-top.show {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translateY(0);
+}
+.scroll-to-top:hover {
+    background: linear-gradient(135deg, #1e40af 60%, #0ea5e9 100%);
+    transform: translateY(-4px) scale(1.08);
+}

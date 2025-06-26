@@ -505,3 +505,19 @@ function initLogoCarousel() {
 window.addEventListener('resize', debounce(() => {
     initLogoCarousel();
 }, 250));
+
+// Scroll To Top Button
+(function () {
+    const scrollBtn = document.getElementById("scrollToTopBtn");
+    if (!scrollBtn) return;
+    window.addEventListener("scroll", function () {
+        if (window.scrollY > window.innerHeight * 0.1) {
+            scrollBtn.classList.add("show");
+        } else {
+            scrollBtn.classList.remove("show");
+        }
+    });
+    scrollBtn.addEventListener("click", function () {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+})();
