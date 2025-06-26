@@ -8,6 +8,50 @@ document.addEventListener("DOMContentLoaded", () => {
   // ===================================
 
   // ===================================
+  // 1.5. INITIALIZE TECH TABS
+  // ===================================
+  // Remove default-active class when clicking on other tabs
+  const techTabButtons = document.querySelectorAll('#nav-security-tab, #nav-support-tab');
+  techTabButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      // Remove default-active class from the first tab (Công nghệ)
+      const firstTab = document.getElementById('nav-tech-tab');
+      if (firstTab) {
+        firstTab.classList.remove('default-active');
+      }
+    });
+  });
+
+  // Also remove default-active when clicking on the first tab itself
+  const firstTabButton = document.getElementById('nav-tech-tab');
+  if (firstTabButton) {
+    firstTabButton.addEventListener('click', function() {
+      this.classList.remove('default-active');
+    });
+  }
+
+  // Remove default-active class when any tab is shown (Bootstrap event)
+  const allTechTabs = document.querySelectorAll('#nav-tech-tab, #nav-security-tab, #nav-support-tab');
+  allTechTabs.forEach(tab => {
+    tab.addEventListener('shown.bs.tab', function(e) {
+      // Remove default-active from first tab when any tab is shown
+      const firstTab = document.getElementById('nav-tech-tab');
+      if (firstTab) {
+        firstTab.classList.remove('default-active');
+      }
+      // Đảm bảo chỉ có 1 tab-pane active/show
+      const tabPanes = document.querySelectorAll('.tech-tabs .tab-pane');
+      tabPanes.forEach(pane => pane.classList.remove('active', 'show'));
+      // Lấy id tab-pane tương ứng
+      const targetId = this.getAttribute('data-bs-target');
+      const targetPane = document.querySelector(targetId);
+      if (targetPane) {
+        targetPane.classList.add('active', 'show');
+      }
+    });
+  });
+
+  // ===================================
   // 2. NAVBAR SCROLL EFFECTS
   // ===================================
   const navbar = document.getElementById("mainNavbar");
