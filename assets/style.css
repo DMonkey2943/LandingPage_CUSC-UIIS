@@ -895,6 +895,55 @@
     margin: 0;
   }
   
+/* ===================================
+   NEWS SECTION
+   ================================= */
+.news-section {
+  padding: var(--section-padding);
+  background: var(--gray-100);
+}
+
+.news-video-wrapper {
+  background: var(--white);
+  border-radius: 18px;
+  box-shadow: var(--shadow-lg);
+  overflow: hidden;
+  transition: box-shadow 0.3s;
+}
+.news-video-wrapper:hover {
+  box-shadow: 0 12px 32px rgba(37,99,235,0.18);
+}
+
+.news-list {
+  gap: 2rem;
+}
+
+.news-item {
+  background: var(--white);
+  border-radius: 14px;
+  box-shadow: var(--shadow-md);
+  transition: box-shadow 0.3s, transform 0.3s, background 0.3s;
+  color: var(--neutral-dark);
+  text-decoration: none;
+  align-items: center;
+}
+.news-item:hover {
+  background: linear-gradient(90deg, var(--secondary-color) 10%, var(--accent-color) 90%);
+  color: var(--white);
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-4px) scale(1.03);
+}
+.news-item:hover .fa-newspaper {
+  color: var(--white) !important;
+}
+.news-item .fa-newspaper {
+  color: var(--secondary-color);
+  transition: color 0.3s;
+}
+.news-item span {
+  transition: color 0.3s;
+}
+  
   /* ===================================
      12. CLIENTS SECTION
      ================================= */
@@ -1171,10 +1220,13 @@
       margin-top: 2rem;
     }
     
-    .consultant-cards {
-        max-width: 500px;
-        margin: 0 auto;
+    .news-section .row.align-items-center {
+      flex-direction: column;
     }
+    .news-video-wrapper {
+      margin-bottom: 2rem;
+    }
+    
   }
   
   @media (max-width: 768px) {
