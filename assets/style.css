@@ -690,155 +690,115 @@
   }
   
   /* ===================================
-     10. TECH SECTION
+     1B. SECURITY/SUPPORT SECTION
      ================================= */
-     .technology-section {
-      padding: var(--section-padding);
-      background: linear-gradient(135deg, var(--neutral-dark) 0%, #0F172A 100%);
-      position: relative;
-      overflow: hidden;
+     
+  .security-support-section {
+    padding: var(--section-padding);
+    background: linear-gradient(135deg, var(--neutral-dark) 0%, #0F172A 100%);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .security-support-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+        radial-gradient(circle at 25% 25%, rgba(37, 99, 235, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 75% 75%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);
+    z-index: 0;
+  }
+
+  .security-support-section .section-title {
+    color: var(--white);
   }
   
-  .technology-section::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      background-image: 
-          radial-gradient(circle at 25% 25%, rgba(37, 99, 235, 0.1) 0%, transparent 50%),
-          radial-gradient(circle at 75% 75%, rgba(16, 185, 129, 0.1) 0%, transparent 50%);
-      z-index: 0;
+  .custom-tab-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      margin-bottom: 1rem;
   }
   
-  .tech-tabs {
-      position: relative;
-      z-index: 1;
-  }
-  
-  .tech-tabs .nav-tabs {
-      border: none;
-      margin-bottom: 3rem;
-  }
-  
-  .tech-tabs .nav-link {
-      background: rgba(255, 255, 255, 0.1);
-      border: 2px solid transparent;
-      color: var(--white);
-      padding: 1rem 2rem;
-      margin: 0 0.5rem;
-      border-radius: 10px;
-      transition: var(--transition-smooth);
-      backdrop-filter: blur(10px);
-  }
-  
-  .tech-tabs .nav-link:hover {
-      background: rgba(255, 255, 255, 0.2);
-      border-color: var(--primary-color);
-  }
-  
-  .tech-tabs .nav-link.active {
-      background: var(--primary-color);
-      border-color: var(--primary-color);
-      color: var(--white);
-  }
-  
-  /* Style for default active tab (Công nghệ) */
-  .tech-tabs .nav-link.default-active {
-      background: var(--primary-color);
-      border-color: var(--primary-color);
-      color: var(--white);
-  }
-  
-  .tech-tabs .nav-link i {
-      margin-right: 0.5rem;
-      font-size: 1.2rem;
-  }
-  
-  .tab-content {
+  .custom-tab-button {
       background: rgba(255, 255, 255, 0.05);
-      padding: 3rem;
-      border-radius: 15px;
-      backdrop-filter: blur(10px);
       border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(5px);
+      border-radius: 12px;
+      color: var(--gray-300);
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--transition-normal);
   }
   
-  .tech-stack {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-  }
-  
-  .tech-item {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 1rem;
+  .custom-tab-button:hover {
+      color: var(--white);
       background: rgba(255, 255, 255, 0.1);
-      border-radius: 10px;
-      transition: var(--transition-smooth);
-      min-width: 120px;
+      transform: translateY(-3px);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   }
   
-  .tech-item:hover {
-      background: rgba(255, 255, 255, 0.2);
-      transform: translateY(-5px);
-  }
-  
-  .tech-item i {
-      font-size: 3rem;
-      color: var(--accent-color);
-      margin-bottom: 1rem;
-  }
-  
-  .tech-item span {
+  .custom-tab-button.active {
+      background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
       color: var(--white);
-      font-weight: 500;
+      border-color: transparent;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 20px rgba(37, 99, 235, 0.4);
   }
   
-  .tech-features {
-      list-style: none;
-      padding: 0;
+  .custom-tab-button i {
+      margin-right: 0.5rem;
   }
   
-  .tech-features li {
-      color: var(--white);
-      margin-bottom: 1rem;
-      padding-left: 2rem;
-      position: relative;
-      opacity: 0.9;
+  .custom-tab-content {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(5px);
+      border-radius: 15px;
+      padding: 2.5rem;
+      margin-top: 1rem;
   }
   
-  .tech-features li::before {
-      content: '✓';
-      position: absolute;
-      left: 0;
-      color: var(--secondary-color);
-      font-weight: bold;
-      font-size: 1.2rem;
+  .custom-tab-pane {
+      display: none;
+      animation: fadeIn 0.5s ease;
   }
   
-  .security-item, .support-item {
+  .custom-tab-pane.active {
+      display: block;
+  }
+  
+  /* Re-using styles from the original dark section, but adapting them for light background */
+  .security-support-section .security-item,
+  .security-support-section .support-item {
       text-align: center;
       padding: 2rem 1rem;
   }
   
-  .security-item i, .support-item i {
+  .security-support-section .security-item i,
+  .security-support-section .support-item i {
       font-size: 3rem;
       color: var(--accent-color);
       margin-bottom: 1rem;
       display: block;
   }
   
-  .security-item h5, .support-item h5 {
+  .security-support-section .security-item h5,
+  .security-support-section .support-item h5 {
       color: var(--white);
       margin-bottom: 1rem;
   }
   
-  .security-item p, .support-item p {
-      color: var(--white);
-      opacity: 0.8;
+  .security-support-section .security-item p,
+  .security-support-section .support-item p {
+    color: var(--gray-300);
+    opacity: 0.9;
       margin: 0;
       text-align: center;
   }
@@ -1168,11 +1128,7 @@
   /* ===================================
      15. RESPONSIVE DESIGN
      ================================= */
-  @media (max-width: 1200px) {
-    .tech-stack {
-        justify-content: center;
-    }
-    
+  @media (max-width: 1200px) {    
     /* Căn giữa cột 1 (thông tin CUSC) trong footer */
     .footer .col-xl-5 {
         text-align: center;
@@ -1269,25 +1225,6 @@
       width: 3rem;
       height: 3rem;
       font-size: 1.25rem;
-    }
-    
-    .tech-tabs .nav-link {
-        padding: 0.75rem 1rem;
-        margin: 0.25rem;
-        font-size: 0.9rem;
-    }
-    
-    .tab-content {
-        padding: 2rem 1rem;
-    }
-    
-    .tech-stack {
-        gap: 1rem;
-    }
-    
-    .tech-item {
-        min-width: 100px;
-        padding: 0.8rem 0.5rem;
     }
   
     .achievement-card {
