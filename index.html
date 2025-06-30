@@ -718,25 +718,6 @@
                             <span>Tổng: <strong>1,234</strong></span>
                         </div>
                     </div>
-                    <!-- <div class="quick-contact">
-                        <div class="qr-code-container">
-                            <img src="assets/img/qr-lien-he-tu-van.jpg" alt="QR Code Zalo" class="img-fluid">
-                            <div class="qr-overlay">
-                                <i class="fab fa-zalo"></i>
-                                <span>Chat Zalo</span>
-                            </div>
-                        </div>
-                        <div class="contact-buttons">
-                            <a href="tel:0123456789" class="contact-btn">
-                                <i class="fas fa-phone"></i>
-                                <span>Gọi ngay</span>
-                            </a>
-                            <a href="mailto:cusc@ctu.edu.vn" class="contact-btn">
-                                <i class="fas fa-envelope"></i>
-                                <span>Email</span>
-                            </a>
-                        </div>
-                    </div> -->
                 </div>
             </div>
 
@@ -755,74 +736,60 @@
     <!-- MODAL LIÊN HỆ TƯ VẤN -->
     <div class="modal fade" id="contactModal" tabindex="-1">
         <div class="modal-dialog modal-dialog-centered contact-modal-lg">
-            <div class="modal-content contact-modal-modern">
+            <div class="modal-content contact-modal">
                 <div class="modal-header border-0">
                     <h5 class="modal-title">Liên hệ tư vấn</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body py-3">
-                    <div class="consultant-card-modern card-visit-layout d-flex align-items-stretch mb-3 flex-wrap">
-                        <div class="consultant-info-block d-flex flex-column justify-content-center flex-grow-1 p-3">
-                            <div class="consultant-avatar-modern mb-3 mx-0">
-                                <img src="assets/img/avatar_12.webp" alt="Mr. Nguyễn Thanh Nhàn"
-                                    class="img-fluid rounded-circle">
+                    <!-- Card 1: Mr. Nguyễn Thanh Nhàn -->
+                    <div class="consultant-card mb-4">
+                        <div class="row align-items-center gy-2">
+                            <!-- Avatar -->
+                            <div class="col-lg-2 col-sm-3 col-12 text-center consultant-avatar">
+                                <img src="assets/img/avatar_12.webp" alt="Mr. Nguyễn Thanh Nhàn" class="img-fluid rounded-circle">
                             </div>
-                            <h6 class="mb-1">Mr. Nguyễn Thanh Nhàn</h6>
-                            <span class="consultant-title-modern mb-3">
-                                <span class="nowrap">Chuyên viên </span>
-                                <span class="nowrap">tư vấn phần mềm 1</span>
-                            </span>
-                            <div class="consultant-contact-list">
-                                <div class="consultant-contact-row mb-2">
-                                    <a href="tel:0123456789" class="consultant-icon-link-visit me-2"><i
-                                            class="fas fa-phone"></i></a>
-                                    <span class="consultant-contact-text">0939 511 445</span>
-                                </div>
-                                <div class="consultant-contact-row mb-2">
-                                    <a href="mailto:nhannguyen@ctu.edu.vn" class="consultant-icon-link-visit me-2"><i
-                                            class="fas fa-envelope"></i></a>
-                                    <span class="consultant-contact-text">nhannguyen@ctu.edu.vn</span>
+                            <!-- Thông tin -->
+                            <div class="col-lg-7 col-sm-6 col-12 consultant-info">
+                                <div class="text-start text-md-start text-lg-start text-center">
+                                    <div class="consultant-name">Mr. Nguyễn Thanh Nhàn</div>
+                                    <div class="consultant-title">Chuyên viên tư vấn phần mềm 1</div>
+                                    <div class="consultant-contacts">
+                                        <a href="tel:0939511445" class="contact-link"><i class="fas fa-phone"></i> 0939 511 445</a>
+                                        <a href="mailto:nhannguyen@ctu.edu.vn" class="contact-link"><i class="fas fa-envelope"></i> nhannguyen@ctu.edu.vn</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div
-                            class="consultant-qr-block d-flex flex-column align-items-center justify-content-center p-3">
-                            <div class="consultant-qr-visit mb-2">
-                                <img src="assets/img/qr-lien-he-tu-van.webp" alt="QR Zalo" class="img-fluid">
+                            <!-- QR Code -->
+                            <div class="col-lg-3 col-sm-3 col-12 consultant-qr text-center mt-md-2 mt-lg-0">
+                                <img src="assets/img/qr-lien-he-tu-van.webp" alt="QR Zalo" class="img-fluid qr-img">
+                                <div class="qr-label">Quét để liên hệ</div>
                             </div>
-                            <div class="consultant-action-label">Quét để liên hệ</div>
                         </div>
                     </div>
-                    <div class="consultant-card-modern card-visit-layout d-flex align-items-stretch flex-wrap">
-                        <div class="consultant-info-block d-flex flex-column justify-content-center flex-grow-1 p-3">
-                            <div class="consultant-avatar-modern mb-3 mx-0">
-                                <img src="assets/img/avatar_12.webp" alt="Mr. Lê Vũ Luân"
-                                    class="img-fluid rounded-circle">
+                    <!-- Card 2: Mr. Lê Vũ Luân -->
+                    <div class="consultant-card">
+                        <div class="row align-items-center gy-2">
+                            <!-- Avatar -->
+                            <div class="col-lg-2 col-sm-3 col-12 text-center consultant-avatar">
+                                <img src="assets/img/avatar_12.webp" alt="Mr. Lê Vũ Luân" class="img-fluid rounded-circle">
                             </div>
-                            <h6 class="mb-1">Mr. Lê Vũ Luân</h6>
-                            <span class="consultant-title-modern mb-3">
-                                <span class="nowrap">Chuyên viên </span>
-                                <span class="nowrap">tư vấn phần mềm 2</span>
-                            </span>
-                            <div class="consultant-contact-list">
-                                <div class="consultant-contact-row mb-2">
-                                    <a href="tel:0987654321" class="consultant-icon-link-visit me-2"><i
-                                            class="fas fa-phone"></i></a>
-                                    <span class="consultant-contact-text">0366 183 317</span>
-                                </div>
-                                <div class="consultant-contact-row mb-2">
-                                    <a href="mailto:lvluan@ctu.edu.vn" class="consultant-icon-link-visit me-2"><i
-                                            class="fas fa-envelope"></i></a>
-                                    <span class="consultant-contact-text">lvluan@ctu.edu.vn</span>
+                            <!-- Thông tin -->
+                            <div class="col-lg-7 col-sm-6 col-12 consultant-info">
+                                <div class="text-start text-md-start text-lg-start text-center">
+                                    <div class="consultant-name">Mr. Lê Vũ Luân</div>
+                                    <div class="consultant-title">Chuyên viên tư vấn phần mềm 2</div>
+                                    <div class="consultant-contacts">
+                                        <a href="tel:0366183317" class="contact-link"><i class="fas fa-phone"></i> 0366 183 317</a>
+                                        <a href="mailto:lvluan@ctu.edu.vn" class="contact-link"><i class="fas fa-envelope"></i> lvluan@ctu.edu.vn</a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <div
-                            class="consultant-qr-block d-flex flex-column align-items-center justify-content-center p-3">
-                            <div class="consultant-qr-visit mb-2">
-                                <img src="assets/img/qr-lien-he-tu-van.webp" alt="QR Zalo" class="img-fluid">
+                            <!-- QR Code -->
+                            <div class="col-lg-3 col-sm-3 col-12 consultant-qr text-center mt-md-2 mt-lg-0">
+                                <img src="assets/img/qr-lien-he-tu-van.webp" alt="QR Zalo" class="img-fluid qr-img">
+                                <div class="qr-label">Quét để liên hệ</div>
                             </div>
-                            <div class="consultant-action-label">Quét để liên hệ</div>
                         </div>
                     </div>
                 </div>

@@ -1190,169 +1190,6 @@
     color: var(--white);
   }
   
-  .consultant-cards {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-  }
-  
-  .consultant-card {
-    background: linear-gradient(145deg, #f8f9fa, #e9ecef);
-    border-radius: 16px;
-    padding: 1.5rem;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  }
-  
-  .consultant-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-    background: linear-gradient(145deg, #ffffff, #f8f9fa);
-  }
-  
-  .consultant-info {
-    display: flex;
-    gap: 1.5rem;
-    align-items: flex-start;
-  }
-  
-  .consultant-details {
-    flex: 1;
-  }
-  
-  .consultant-header {
-    margin-bottom: 1rem;
-  }
-  
-  .consultant-header h6 {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 0.5rem;
-    color: var(--primary-color);
-  }
-  
-  .consultant-badge {
-    display: inline-block;
-    padding: 0.25rem 0.75rem;
-    background: var(--primary-color);
-    color: white;
-    border-radius: 20px;
-    font-size: 0.85rem;
-    font-weight: 500;
-  }
-  
-  .consultant-contact {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-  }
-  
-  .contact-link {
-    display: flex;
-    align-items: center;
-    gap: 0.75rem;
-    padding: 0.5rem;
-    border-radius: 8px;
-    background: rgba(255, 255, 255, 0.8);
-    transition: all 0.3s ease;
-    text-decoration: none;
-    color: var(--dark-text);
-  }
-  
-  .contact-link:hover {
-    background: var(--primary-color);
-    color: white;
-    transform: translateX(5px);
-  }
-  
-  .contact-icon {
-    width: 36px;
-    height: 36px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: rgba(0, 0, 0, 0.05);
-    border-radius: 8px;
-    transition: all 0.3s ease;
-  }
-  
-  .contact-link:hover .contact-icon {
-    background: rgba(255, 255, 255, 0.2);
-  }
-  
-  .contact-text {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .contact-label {
-    font-size: 0.8rem;
-    opacity: 0.8;
-  }
-  
-  .contact-value {
-    font-weight: 500;
-  }
-  
-  .consultant-qr {
-    flex-shrink: 0;
-    width: 120px;
-  }
-  
-  .qr-wrapper {
-    position: relative;
-    width: 120px;
-    height: 120px;
-    border-radius: 12px;
-    overflow: hidden;
-    background: white;
-    padding: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-  }
-  
-  .qr-wrapper:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  }
-  
-  .qr-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-  
-  .qr-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.7);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    opacity: 0;
-    transition: all 0.3s ease;
-  }
-  
-  .qr-wrapper:hover .qr-overlay {
-    opacity: 1;
-  }
-  
-  .qr-overlay i {
-    font-size: 1.5rem;
-    margin-bottom: 0.5rem;
-  }
-  
-  .qr-overlay span {
-    font-size: 0.9rem;
-    font-weight: 500;
-  }
-  
   /* ===================================
      14. MODAL STYLES
      ================================= */
@@ -1374,64 +1211,7 @@
   }
   
   .modal-body {
-    padding: 2rem;
-  }
-  
-  .consultant-card {
-    background: var(--gray-100);
-    border-radius: 12px;
-    padding: 1.5rem;
-    text-align: center;
-    height: 100%;
-    transition: all var(--transition-normal);
-  }
-  
-  .consultant-card:hover {
-    background: var(--white);
-    box-shadow: var(--shadow-md);
-  }
-  
-  .consultant-avatar {
-    margin-bottom: 1rem;
-  }
-  
-  .consultant-avatar img {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-  }
-  
-  .consultant-details h6 {
-    color: var(--primary-color);
-    margin-bottom: 0.5rem;
-  }
-  
-  .consultant-title {
-    color: var(--gray-600);
-    font-size: 0.875rem;
-    margin-bottom: 1rem;
-  }
-  
-  .consultant-contact p {
-    margin-bottom: 0.25rem;
-    font-size: 0.875rem;
-  }
-  
-  .consultant-contact a {
-    color: var(--secondary-color);
-    text-decoration: none;
-  }
-  
-  .consultant-contact a:hover {
-    text-decoration: underline;
-  }
-  
-  .qr-code-small {
-    margin-top: 1rem;
-  }
-  
-  .qr-code-small img {
-    border-radius: 4px;
+    padding: 1rem;
   }
   
   .modal-footer {
@@ -1758,341 +1538,184 @@
     }
   }
 
-  /* --- Contact Modal Modern --- */
-  .contact-modal-modern {
-    border-radius: 18px;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.18);
-    background: #fff;
-  }
-  .consultant-card-modern {
-    background: #f8f9fa;
-    border-radius: 14px;
-    padding: 18px 18px 18px 12px;
-    margin-bottom: 16px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-    transition: box-shadow 0.2s;
-  }
-  .consultant-card-modern:hover {
-    box-shadow: 0 4px 16px rgba(0,0,0,0.10);
-  }
-  .consultant-avatar-modern {
-    width: 80px;
-    height: 80px;
-    flex-shrink: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  .consultant-avatar-modern img {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 2px solid #e3e3e3;
-  }
-  .consultant-info-modern h6 {
-    font-size: 1.15rem;
-    font-weight: 600;
-    margin-bottom: 2px;
-  }
-  .consultant-title-modern {
-    font-size: 0.98rem;
-    color: #6c757d;
-    font-weight: 400;
-  }
-  .consultant-actions-modern {
-    gap: 16px;
-  }
-  .consultant-icon-link {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    background: #fff;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
-    color: #0d6efd;
-    font-size: 1.25rem;
-    margin-left: 0;
-    transition: background 0.18s, color 0.18s, box-shadow 0.18s;
-    border: 1px solid #e3e3e3;
-    position: relative;
-  }
-  .consultant-icon-link img {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
-    border-radius: 4px;
-  }
-  .consultant-icon-link:hover, .consultant-icon-link:focus {
-    background: #0d6efd;
-    color: #fff;
-    box-shadow: 0 2px 8px rgba(13,110,253,0.10);
-  }
-  .consultant-icon-link:hover img, .consultant-icon-link:focus img {
-    filter: brightness(0) invert(1);
-  }
+/* ===================================
+   17. MODAL LIÊN HỆ TƯ VẤN
+   ================================= */
+.contact-modal {
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  background: #fff;
+}
+.contact-modal-lg {
+  max-width: 800px;
+  width: 95vw;
+}
 
-  /* --- Consultant Actions Modern --- */
-  .consultant-actions-modern {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-    justify-content: flex-end;
-  }
-  .consultant-action-item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-width: 90px;
-  }
-  .consultant-icon-link-large {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 48px;
-    height: 48px;
-    border-radius: 50%;
-    background: #fff;
-    box-shadow: 0 1px 4px rgba(0,0,0,0.06);
-    color: #0d6efd;
-    font-size: 1.5rem;
-    border: 1.5px solid #e3e3e3;
-    margin-bottom: 0.5rem;
-    transition: background 0.18s, color 0.18s, box-shadow 0.18s;
-  }
-  .consultant-icon-link-large:hover, .consultant-icon-link-large:focus {
-    background: #0d6efd;
-    color: #fff;
-    box-shadow: 0 2px 8px rgba(13,110,253,0.10);
-  }
-  .consultant-qr-large {
-    width: 90px;
-    height: 90px;
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 0.5rem;
-    border: 1.5px solid #e3e3e3;
-    overflow: hidden;
-  }
-  .consultant-qr-large img {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-    border-radius: 8px;
-  }
-  @media (max-width: 991.98px) {
-    .consultant-actions-modern {
-      justify-content: flex-start;
-      gap: 0.5rem 1.5rem;
-    }
-    .consultant-action-item {
-      min-width: 80px;
-    }
-    .consultant-qr-large {
-      width: 70px;
-      height: 70px;
-    }
-    .consultant-qr-large img {
-      width: 62px;
-      height: 62px;
-    }
-  }
-  @media (max-width: 575.98px) {
-    .consultant-actions-modern {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 0.5rem 0;
-      width: 100%;
-      margin-top: 1rem;
-    }
-    .consultant-action-item {
-      flex-direction: row;
-      align-items: center;
-      min-width: 0;
-      width: 100%;
-      margin-bottom: 0.5rem;
-      justify-content: flex-start;
-    }
-    .consultant-icon-link-large {
-      width: 38px;
-      height: 38px;
-      font-size: 1.1rem;
-      margin-bottom: 0;
-      margin-right: 0.75rem;
-    }
-    .consultant-action-label {
-      font-size: 0.95rem;
-      margin-top: 0;
-    }
-    .consultant-qr-large {
-      width: 54px;
-      height: 54px;
-      margin-right: 0.75rem;
-    }
-    .consultant-qr-large img {
-      width: 48px;
-      height: 48px;
-    }
-  }
-
-  /* --- Card Visit Layout for Consultant --- */
-  .card-visit-layout {
-    min-height: 180px;
-    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
-    border: 1.5px solid #e3e3e3;
-    border-radius: 18px;
-    background: #fff;
-    display: flex;
-    flex-direction: row;
-    align-items: stretch;
-    margin-bottom: 24px;
-    overflow: hidden;
-  }
-  .consultant-info-block {
-    flex: 1 1 0;
-    min-width: 0;
-    border-right: 1.5px solid #f0f0f0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background: #f8f9fa;
-  }
-  .consultant-contact-list {
-    margin-top: 10px;
-  }
-  .consultant-contact-row {
-    display: flex;
-    align-items: center;
-    font-size: 1.08rem;
-    color: #222;
-    font-weight: 500;
-  }
-  .consultant-icon-link-visit {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 38px;
-    height: 38px;
-    border-radius: 50%;
-    background: #fff;
-    color: #0d6efd;
-    font-size: 1.25rem;
-    border: 1.5px solid #e3e3e3;
-    transition: background 0.18s, color 0.18s, box-shadow 0.18s;
-  }
-  .consultant-icon-link-visit:hover, .consultant-icon-link-visit:focus {
-    background: #0d6efd;
-    color: #fff;
-    box-shadow: 0 2px 8px rgba(13,110,253,0.10);
-  }
-  .consultant-contact-text {
-    font-size: 1.08rem;
-    color: #222;
-    font-weight: 500;
-    word-break: break-all;
-  }
-  .consultant-qr-block {
-    flex: 0 0 180px;
-    min-width: 160px;
-    background: #fff;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    border-radius: 0 18px 18px 0;
-  }
-  .consultant-qr-visit {
-    width: 140px;
-    height: 140px;
-    background: #fff;
-    border-radius: 14px;
-    box-shadow: 0 2px 12px rgba(0,0,0,0.10);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1.5px solid #e3e3e3;
-    overflow: hidden;
-  }
-  .consultant-qr-visit img {
-    width: 128px;
-    height: 128px;
-    object-fit: contain;
-    border-radius: 10px;
-  }
-  .consultant-action-label {
-    font-size: 1.08rem;
-    color: var(--gray-700);
-    font-weight: 400;
-    margin-top: 0.5rem;
-    text-align: center;
-  }
-  @media (max-width: 768px) {
-    .card-visit-layout {
-      flex-direction: column;
-      align-items: stretch;
-      min-height: 0;
-    }
-    .consultant-info-block {
-      border-right: none;
-      border-bottom: 1.5px solid #f0f0f0;
-      border-radius: 18px 18px 0 0;
-      padding-bottom: 0.5rem !important;
-    }
-    .consultant-qr-block {
-      border-radius: 0 0 18px 18px;
-      min-width: 0;
-      flex: none;
-      padding-top: 0.5rem !important;
-    }
-    .consultant-qr-visit {
-      width: 120px;
-      height: 120px;
-    }
-    .consultant-qr-visit img {
-      width: 108px;
-      height: 108px;
-    }
-  }
-  
-  /* --- Custom modal width for contact modal --- */
+.consultant-card {
+  background: #f4f8fb;
+  border-radius: 10px;
+  padding: 1.1rem 1rem 0.9rem 1rem;
+  margin-bottom: 1.2rem;
+  border: 1px solid #e3e8ee;
+  box-shadow: 0 2px 8px rgba(36, 99, 235, 0.03);
+}
+.consultant-avatar img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 2px solid #e3e8ee;
+  background: #fff;
+}
+.consultant-info {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.consultant-name {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin-bottom: 0.15rem;
+}
+.consultant-title {
+  color: var(--gray-600);
+  font-size: 1rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+.consultant-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+.contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--gray-700);
+  text-decoration: none;
+  padding: 0.18rem 0.5rem;
+  border-radius: 6px;
+  transition: background 0.2s, color 0.2s;
+}
+.contact-link:hover {
+  background: var(--primary-color);
+  color: var(--white);
+}
+.contact-link i {
+  font-size: 1.1rem;
+  width: 18px;
+  text-align: center;
+}
+.consultant-qr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.2rem;
+  margin-top: 0.2rem;
+}
+.qr-img {
+  width: 125px;
+  height: 125px;
+  border-radius: 6px;
+  background: var(--white);
+  border: 1px solid #e3e8ee;
+  object-fit: contain;
+}
+.qr-label {
+  font-size: 1rem;
+  color: var(--gray-600);
+  margin-top: 0.1rem;
+}
+@media (max-width: 768px) {
   .contact-modal-lg {
-    max-width: 800px;
-    width: 95vw;
+    max-width: 98vw;
+    width: 98vw;
   }
-  @media (max-width: 768px) {
-    .contact-modal-lg {
-      max-width: 98vw;
-      width: 98vw;
-    }
+  .consultant-card {
+    padding: 0.9rem 0.7rem 0.7rem 0.7rem;
   }
-
-  /* Scroll To Top Button */
-.scroll-to-top {
-    position: fixed;
-    right: 2rem;
-    bottom: 2rem;
-    z-index: 999;
-    width: 48px;
-    height: 48px;
-    border: none;
-    border-radius: 50%;
-    background: linear-gradient(135deg, var(--primary-color) 60%, var(--secondary-color) 100%);
-    color: #fff;
-    font-size: 1.5rem;
-    box-shadow: 0 4px 16px rgba(37,99,235,0.15);
-    display: flex;
-    align-items: center;
+  .consultant-avatar img {
+    width: 100px;
+    height: 100px;
+  }
+  .qr-img {
+    width: 120px;
+    height: 120px;
+  }
+  /* QR code rớt xuống, canh giữa */
+  .consultant-qr {
+    margin-top: 0.7rem;
+    margin-bottom: 0.2rem;
     justify-content: center;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.3s, transform 0.3s;
+  }
+  .row > .consultant-qr {
+    order: 3;
+  }
+}
+@media (max-width: 576px) {
+  .consultant-card {
+    padding: 0.7rem 0.4rem 0.5rem 0.4rem;
+  }
+  .consultant-avatar img {
+    width: 88px;
+    height: 88px;
+  }
+  .qr-img {
+    width: 120px;
+    height: 120px;
+  }
+  .consultant-info {
+    padding: 0;
+    text-align: center;
+    margin-bottom: 0.3rem;
+  }
+  .consultant-contacts {
+    align-items: center;
+  }
+  .contact-link {
+    width: 100%;
+    justify-content: center;
+    font-size: 1.1rem;
+  }
+  /* Mỗi phần 1 hàng riêng */
+  .consultant-avatar, .consultant-info, .consultant-qr {
+    margin-bottom: 0.5rem;
+  }
+  .row > .consultant-avatar {
+    order: 1;
+  }
+  .row > .consultant-info {
+    order: 2;
+  }
+  .row > .consultant-qr {
+    order: 3;
+    margin-top: 0.2rem;
+  }
+}
+
+/* Scroll To Top Button */
+.scroll-to-top {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  z-index: 999;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary-color) 60%, var(--secondary-color) 100%);
+  color: #fff;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 16px rgba(37,99,235,0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s, transform 0.3s;
 }
 .scroll-to-top.show {
     opacity: 1;
