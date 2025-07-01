@@ -1,14 +1,10 @@
-// ===================================
-// CUSC-UIIS Landing Page JavaScript
-// ===================================
-
 document.addEventListener("DOMContentLoaded", () => {
   // ===================================
-  // 1. INITIALIZE AOS ANIMATIONS
+  // INITIALIZE AOS ANIMATIONS
   // ===================================
 
   // ===================================
-  // 2. NAVBAR SCROLL EFFECTS
+  // NAVBAR SCROLL EFFECTS
   // ===================================
   const navbar = document.getElementById("mainNavbar");
   const navLinks = document.querySelectorAll(".nav-link");
@@ -49,7 +45,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // ===================================
-  // 3. SMOOTH SCROLLING FOR NAV LINKS
+  // SMOOTH SCROLLING FOR NAV LINKS
   // ===================================
   navLinks.forEach((link) => {
     link.addEventListener("click", function (e) {
@@ -74,30 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // ===================================
-  // 4. TYPEWRITER EFFECT FOR HERO TITLE
-  // ===================================
-  // const typewriterElement = document.getElementById("typewriter");
-  // if (typewriterElement) {
-  //   const typed = new Typed("#typewriter", {
-  //     strings: ["Hệ thống tích hợp Quản lý đào tạo CUSC-UIIS"],
-  //     typeSpeed: 50, // tốc độ gõ (ms)
-  //     backSpeed: 30,
-  //     loop: false,
-  //     showCursor: true,
-  //     cursorChar: "|",
-  //     smartBackspace: false,  // không cần thông minh xóa
-  //     backDelay: 999999, // delay dài để chắc chắn không xóa
-  //     onComplete: () => {
-  //       // Hide cursor after completion
-  //       setTimeout(() => {
-  //         document.querySelector(".typed-cursor").style.display = "none";
-  //       }, 2000);
-  //     },
-  //   });
-  // }
-
-  // ===================================
-  // 5. COUNTER ANIMATION FOR STATS
+  // COUNTER ANIMATION FOR STATS
   // ===================================
   function animateCounter(element, target, duration = 2000) {
     let start = 0;
@@ -139,7 +112,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ===================================
-  // 6. MODEL SECTION INTERACTIVE TABS
+  // MODEL SECTION INTERACTIVE TABS
   // ===================================
   const modelButtons = document.querySelectorAll(".model-btn");
   const modelContents = document.querySelectorAll(".model-content");
@@ -162,30 +135,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // ===================================
-  // 7. FLOATING ICONS ANIMATION
-  // ===================================
-  function createFloatingAnimation() {
-    const floatingIcons = document.querySelectorAll(".floating-icon");
-
-    floatingIcons.forEach((icon, index) => {
-      // Random animation delay
-      const delay = Math.random() * 2;
-      icon.style.animationDelay = `${delay}s`;
-
-      // Random movement on mouse move
-      document.addEventListener("mousemove", (e) => {
-        const x = (e.clientX / window.innerWidth) * 10;
-        const y = (e.clientY / window.innerHeight) * 10;
-
-        icon.style.transform = `translate(${x}px, ${y}px)`;
-      });
-    });
-  }
-
-  createFloatingAnimation();
-
-  // ===================================
-  // 8. SCROLL REVEAL ANIMATIONS
+  // SCROLL REVEAL ANIMATIONS
   // ===================================
   const revealObserver = new IntersectionObserver(
     (entries) => {
@@ -208,7 +158,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // ===================================
-  // 9. MODAL ENHANCEMENTS
+  // MODAL ENHANCEMENTS
   // ===================================
   const contactModal = document.getElementById("contactModal");
   if (contactModal) {
@@ -224,7 +174,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ===================================
-  // 10. PERFORMANCE OPTIMIZATIONS
+  // PERFORMANCE OPTIMIZATIONS
   // ===================================
 
   // Lazy load images
@@ -260,7 +210,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ===================================
-  // 11. ACCESSIBILITY ENHANCEMENTS
+  // ACCESSIBILITY ENHANCEMENTS
   // ===================================
 
   // Keyboard navigation for model buttons
@@ -286,7 +236,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // ===================================
-  // 12. MOBILE OPTIMIZATIONS
+  // MOBILE OPTIMIZATIONS
   // ===================================
 
   // Touch events for mobile
@@ -321,7 +271,7 @@ document.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("resize", optimizeForMobile);
 
   // ===================================
-  // 13. ERROR HANDLING
+  // ERROR HANDLING
   // ===================================
 
   // Global error handler
@@ -339,7 +289,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // ===================================
-  // 14. ANALYTICS & TRACKING
+  // ANALYTICS & TRACKING
   // ===================================
 
   // Track button clicks
@@ -373,7 +323,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // ===================================
-  // 15. INITIALIZATION COMPLETE
+  // INITIALIZATION COMPLETE
   // ===================================
 
   console.log("CUSC-UIIS Landing Page initialized successfully");
@@ -382,26 +332,29 @@ document.addEventListener("DOMContentLoaded", () => {
   document.body.classList.add("loaded");
 
   // Custom Tab Logic for Security/Support Section
-  const customTabContainer = document.querySelector(".security-support-section");
+  const customTabContainer = document.querySelector(
+    ".security-support-section"
+  );
   if (customTabContainer) {
-    const tabButtons = customTabContainer.querySelectorAll(".custom-tab-button");
+    const tabButtons =
+      customTabContainer.querySelectorAll(".custom-tab-button");
     const tabPanes = customTabContainer.querySelectorAll(".custom-tab-pane");
 
-    tabButtons.forEach(button => {
+    tabButtons.forEach((button) => {
       button.addEventListener("click", () => {
         const targetId = button.getAttribute("data-tab-target");
 
         // Deactivate all tabs and panes within this section
-        tabButtons.forEach(btn => btn.classList.remove("active"));
-        tabPanes.forEach(pane => pane.classList.remove("active"));
-        
+        tabButtons.forEach((btn) => btn.classList.remove("active"));
+        tabPanes.forEach((pane) => pane.classList.remove("active"));
+
         // Activate clicked tab and corresponding pane
         button.classList.add("active");
         if (targetId) {
-            const targetPane = document.querySelector(targetId);
-            if(targetPane) {
-                targetPane.classList.add("active");
-            }
+          const targetPane = document.querySelector(targetId);
+          if (targetPane) {
+            targetPane.classList.add("active");
+          }
         }
       });
     });
@@ -415,7 +368,7 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 // ===================================
-// 16. UTILITY FUNCTIONS
+// UTILITY FUNCTIONS
 // ===================================
 
 // Smooth scroll to element
@@ -472,7 +425,7 @@ function getDeviceType() {
 }
 
 // ===================================
-// 17. EXPORT FOR TESTING
+// EXPORT FOR TESTING
 // ===================================
 if (typeof module !== "undefined" && module.exports) {
   module.exports = {
@@ -501,228 +454,231 @@ const bsCollapse = new bootstrap.Collapse(
 );
 
 // ===================================
-// 18. CLIENT CAROUSEL
+// CLIENT CAROUSEL
 // ===================================
 // Infinite Logo Carousel
 function initLogoCarousel() {
-    const track = document.querySelector('.clients-track');
-    if (!track) return;
+  const track = document.querySelector(".clients-track");
+  if (!track) return;
 
-    // Clone logos for seamless loop
-    const logos = track.querySelectorAll('.client-logo');
-    const totalLogos = logos.length;
-    
-    // Optimize animation performance
-    track.style.willChange = 'transform';
-    
-    // Pause animation on hover
-    track.addEventListener('mouseenter', () => {
-        track.style.animationPlayState = 'paused';
-    });
-    
-    track.addEventListener('mouseleave', () => {
-        track.style.animationPlayState = 'running';
-    });
-    
-    // Optimize for mobile devices
-    if (window.innerWidth <= 768) {
-        track.style.animationDuration = '30s';
-    }
+  // Clone logos for seamless loop
+  const logos = track.querySelectorAll(".client-logo");
+  const totalLogos = logos.length;
+
+  // Optimize animation performance
+  track.style.willChange = "transform";
+
+  // Pause animation on hover
+  track.addEventListener("mouseenter", () => {
+    track.style.animationPlayState = "paused";
+  });
+
+  track.addEventListener("mouseleave", () => {
+    track.style.animationPlayState = "running";
+  });
+
+  // Optimize for mobile devices
+  if (window.innerWidth <= 768) {
+    track.style.animationDuration = "30s";
+  }
 }
 
 // Reinitialize on window resize
-window.addEventListener('resize', debounce(() => {
+window.addEventListener(
+  "resize",
+  debounce(() => {
     initLogoCarousel();
-}, 250));
+  }, 250)
+);
 
 // Scroll To Top Button
 (function () {
-    const scrollBtn = document.getElementById("scrollToTopBtn");
-    if (!scrollBtn) return;
-    window.addEventListener("scroll", function () {
-        if (window.scrollY > window.innerHeight * 0.1) {
-            scrollBtn.classList.add("show");
-        } else {
-            scrollBtn.classList.remove("show");
-        }
-    });
-    scrollBtn.addEventListener("click", function () {
-        window.scrollTo({ top: 0, behavior: "smooth" });
-    });
+  const scrollBtn = document.getElementById("scrollToTopBtn");
+  if (!scrollBtn) return;
+  window.addEventListener("scroll", function () {
+    if (window.scrollY > window.innerHeight * 0.1) {
+      scrollBtn.classList.add("show");
+    } else {
+      scrollBtn.classList.remove("show");
+    }
+  });
+  scrollBtn.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 })();
 
 // ===================================
-// 19. DASHBOARD CHARTS
+// DASHBOARD CHARTS
 // ===================================
 // Add Chart.js datalabels plugin
-if (typeof Chart !== 'undefined') {
-    Chart.register(window.ChartDataLabels || {});
+if (typeof Chart !== "undefined") {
+  Chart.register(window.ChartDataLabels || {});
 }
 
 function initDashboardCharts() {
-    // Revenue Pie Chart
-    const revenueCtx = document.getElementById('revenueChart');
-    if (revenueCtx) {
-        new Chart(revenueCtx, {
-          type: "pie",
-          data: {
-            labels: ["Phí học kỳ", "Phí học lại", "Phí nợ", "Khác"],
-            datasets: [
-              {
-                data: [140503200, 195524950, 87643700, 1515813675],
-                backgroundColor: ["#2563EB", "#10B981", "#FF6B6B", "#F59E0B"],
-                borderWidth: 0,
-              },
-            ],
+  // Revenue Pie Chart
+  const revenueCtx = document.getElementById("revenueChart");
+  if (revenueCtx) {
+    new Chart(revenueCtx, {
+      type: "pie",
+      data: {
+        labels: ["Phí học kỳ", "Phí học lại", "Phí nợ", "Khác"],
+        datasets: [
+          {
+            data: [140503200, 195524950, 87643700, 1515813675],
+            backgroundColor: ["#2563EB", "#10B981", "#FF6B6B", "#F59E0B"],
+            borderWidth: 0,
           },
-          options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: {
-              legend: {
-                position: "bottom",
-                labels: {
-                  font: {
-                    family: "'Montserrat', sans-serif",
-                    size: 12,
-                  },
-                  padding: 20,
-                },
+        ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            position: "bottom",
+            labels: {
+              font: {
+                family: "'Montserrat', sans-serif",
+                size: 12,
               },
-              title: {
-                display: true,
-                text: "Tổng các khoản đã thu trong HKII (2024-2025)",
-                font: {
-                  family: "'Montserrat', sans-serif",
-                  size: 16,
-                  weight: "bold",
-                },
-                padding: {
-                  bottom: 20,
-                },
-              },
-              datalabels: {
-                color: "#fff",
-                font: {
-                  family: "'Montserrat', sans-serif",
-                  size: 13,
-                  weight: "bold",
-                },
-                formatter: (value, context) => {
-                  const data = context.chart.data.datasets[0].data;
-                  const total = data.reduce((a, b) => a + b, 0);
-                  const percent = ((value / total) * 100).toFixed(1);
-                  return percent + "%";
-                },
-              },
-              tooltip: {
-                callbacks: {
-                  label: function(context) {
-                    const label = context.label || '';
-                    const value = context.parsed || 0;
-                    return value.toLocaleString('vi-VN') + ' VNĐ';
-                  }
-                }
-              }
+              padding: 20,
             },
           },
-          plugins: [window.ChartDataLabels],
-        });
-    }
+          title: {
+            display: true,
+            text: "Tổng các khoản đã thu trong HKII (2024-2025)",
+            font: {
+              family: "'Montserrat', sans-serif",
+              size: 16,
+              weight: "bold",
+            },
+            padding: {
+              bottom: 20,
+            },
+          },
+          datalabels: {
+            color: "#fff",
+            font: {
+              family: "'Montserrat', sans-serif",
+              size: 13,
+              weight: "bold",
+            },
+            formatter: (value, context) => {
+              const data = context.chart.data.datasets[0].data;
+              const total = data.reduce((a, b) => a + b, 0);
+              const percent = ((value / total) * 100).toFixed(1);
+              return percent + "%";
+            },
+          },
+          tooltip: {
+            callbacks: {
+              label: function (context) {
+                const label = context.label || "";
+                const value = context.parsed || 0;
+                return value.toLocaleString("vi-VN") + " VNĐ";
+              },
+            },
+          },
+        },
+      },
+      plugins: [window.ChartDataLabels],
+    });
+  }
 
-    // Enrollment Bar Chart
-    const enrollmentCtx = document.getElementById('enrollmentChart');
-    if (enrollmentCtx) {
-        new Chart(enrollmentCtx, {
-          type: "bar",
-          data: {
-            labels: [
-              "Chính trị",
-              "Sư phạm",
-              "Thủy sản",
-              "Công nghệ",
-              "CNTT&TT",
-              "Nông nghiệp",
-            ],
-            datasets: [
-              {
-                label: "Nhập học",
-                data: [177, 347, 220, 205, 362, 315],
-                backgroundColor: "#2563EB",
-                borderWidth: 0,
-              },
-              {
-                label: "Tốt nghiệp",
-                data: [86, 203, 287, 121, 217, 204],
-                backgroundColor: "#10B981",
-                borderWidth: 0,
-              },
-            ],
+  // Enrollment Bar Chart
+  const enrollmentCtx = document.getElementById("enrollmentChart");
+  if (enrollmentCtx) {
+    new Chart(enrollmentCtx, {
+      type: "bar",
+      data: {
+        labels: [
+          "Chính trị",
+          "Sư phạm",
+          "Thủy sản",
+          "Công nghệ",
+          "CNTT&TT",
+          "Nông nghiệp",
+        ],
+        datasets: [
+          {
+            label: "Nhập học",
+            data: [177, 347, 220, 205, 362, 315],
+            backgroundColor: "#2563EB",
+            borderWidth: 0,
           },
-          options: {
-            responsive: true,
-            maintainAspectRatio: false,
-            plugins: {
-              legend: {
-                position: "bottom",
-                labels: {
-                  font: {
-                    family: "'Montserrat', sans-serif",
-                    size: 12,
-                  },
-                  padding: 20,
-                },
+          {
+            label: "Tốt nghiệp",
+            data: [86, 203, 287, 121, 217, 204],
+            backgroundColor: "#10B981",
+            borderWidth: 0,
+          },
+        ],
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: {
+            position: "bottom",
+            labels: {
+              font: {
+                family: "'Montserrat', sans-serif",
+                size: 12,
               },
-              title: {
-                display: true,
-                text: "Tình hình nhập học - tốt nghiệp trong những năm gần đây",
-                font: {
-                  family: "'Montserrat', sans-serif",
-                  size: 16,
-                  weight: "bold",
-                },
-                padding: {
-                  bottom: 20,
-                },
-              },
-              datalabels: {
-                anchor: "end",
-                align: "top",
-                color: "#222",
-                font: {
-                  family: "'Montserrat', sans-serif",
-                  weight: "bold",
-                  size: 13,
-                },
-                formatter: (value) => value,
-              },
+              padding: 20,
             },
-            scales: {
-              x: {
-                grid: {
-                  display: false,
-                },
-                ticks: {
-                  font: {
-                    family: "'Montserrat', sans-serif",
-                    size: 11,
-                  },
-                },
-              },
-              y: {
-                grid: {
-                  color: "#E5E5E5",
-                },
-                ticks: {
-                  font: {
-                    family: "'Montserrat', sans-serif",
-                    size: 11,
-                  },
-                },
+          },
+          title: {
+            display: true,
+            text: "Tình hình nhập học - tốt nghiệp trong những năm gần đây",
+            font: {
+              family: "'Montserrat', sans-serif",
+              size: 16,
+              weight: "bold",
+            },
+            padding: {
+              bottom: 20,
+            },
+          },
+          datalabels: {
+            anchor: "end",
+            align: "top",
+            color: "#222",
+            font: {
+              family: "'Montserrat', sans-serif",
+              weight: "bold",
+              size: 13,
+            },
+            formatter: (value) => value,
+          },
+        },
+        scales: {
+          x: {
+            grid: {
+              display: false,
+            },
+            ticks: {
+              font: {
+                family: "'Montserrat', sans-serif",
+                size: 11,
               },
             },
           },
-          plugins: [window.ChartDataLabels],
-        });
-    }
+          y: {
+            grid: {
+              color: "#E5E5E5",
+            },
+            ticks: {
+              font: {
+                family: "'Montserrat', sans-serif",
+                size: 11,
+              },
+            },
+          },
+        },
+      },
+      plugins: [window.ChartDataLabels],
+    });
+  }
 }
