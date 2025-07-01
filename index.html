@@ -24,6 +24,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="assets/style.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <!-- Chart.js datalabels plugin -->
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.2.0/dist/chartjs-plugin-datalabels.min.js"></script>
 </head>
 
 <body>
@@ -294,8 +298,13 @@
                     </div>
                 </div>
                 <div class="col-lg-5 order-lg-2 order-1" data-aos="fade-left">
-                    <div class="dashboard-mockup">
-                        <img src="assets/img/dashboard.webp" alt="Dashboard" class="img-fluid">
+                    <div class="dashboard-charts">
+                        <div class="chart-container mb-5">
+                            <canvas id="revenueChart"></canvas>
+                        </div>
+                        <div class="chart-container">
+                            <canvas id="enrollmentChart"></canvas>
+                        </div>
                     </div>
                 </div>
             </div>

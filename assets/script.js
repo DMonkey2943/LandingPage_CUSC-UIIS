@@ -409,6 +409,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Infinite Logo Carousel
   initLogoCarousel();
+
+  // Initialize Charts
+  initDashboardCharts();
 });
 
 // ===================================
@@ -547,3 +550,179 @@ window.addEventListener('resize', debounce(() => {
         window.scrollTo({ top: 0, behavior: "smooth" });
     });
 })();
+
+// ===================================
+// 19. DASHBOARD CHARTS
+// ===================================
+// Add Chart.js datalabels plugin
+if (typeof Chart !== 'undefined') {
+    Chart.register(window.ChartDataLabels || {});
+}
+
+function initDashboardCharts() {
+    // Revenue Pie Chart
+    const revenueCtx = document.getElementById('revenueChart');
+    if (revenueCtx) {
+        new Chart(revenueCtx, {
+          type: "pie",
+          data: {
+            labels: ["Phí học kỳ", "Phí học lại", "Phí nợ", "Khác"],
+            datasets: [
+              {
+                data: [140503200, 195524950, 87643700, 1515813675],
+                backgroundColor: ["#2563EB", "#10B981", "#FF6B6B", "#F59E0B"],
+                borderWidth: 0,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: {
+                position: "bottom",
+                labels: {
+                  font: {
+                    family: "'Montserrat', sans-serif",
+                    size: 12,
+                  },
+                  padding: 20,
+                },
+              },
+              title: {
+                display: true,
+                text: "Tổng các khoản đã thu trong HKII (2024-2025)",
+                font: {
+                  family: "'Montserrat', sans-serif",
+                  size: 16,
+                  weight: "bold",
+                },
+                padding: {
+                  bottom: 20,
+                },
+              },
+              datalabels: {
+                color: "#fff",
+                font: {
+                  family: "'Montserrat', sans-serif",
+                  size: 13,
+                  weight: "bold",
+                },
+                formatter: (value, context) => {
+                  const data = context.chart.data.datasets[0].data;
+                  const total = data.reduce((a, b) => a + b, 0);
+                  const percent = ((value / total) * 100).toFixed(1);
+                  return percent + "%";
+                },
+              },
+              tooltip: {
+                callbacks: {
+                  label: function(context) {
+                    const label = context.label || '';
+                    const value = context.parsed || 0;
+                    return value.toLocaleString('vi-VN') + ' VNĐ';
+                  }
+                }
+              }
+            },
+          },
+          plugins: [window.ChartDataLabels],
+        });
+    }
+
+    // Enrollment Bar Chart
+    const enrollmentCtx = document.getElementById('enrollmentChart');
+    if (enrollmentCtx) {
+        new Chart(enrollmentCtx, {
+          type: "bar",
+          data: {
+            labels: [
+              "Chính trị",
+              "Sư phạm",
+              "Thủy sản",
+              "Công nghệ",
+              "CNTT&TT",
+              "Nông nghiệp",
+            ],
+            datasets: [
+              {
+                label: "Nhập học",
+                data: [177, 347, 220, 205, 362, 315],
+                backgroundColor: "#2563EB",
+                borderWidth: 0,
+              },
+              {
+                label: "Tốt nghiệp",
+                data: [86, 203, 287, 121, 217, 204],
+                backgroundColor: "#10B981",
+                borderWidth: 0,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            plugins: {
+              legend: {
+                position: "bottom",
+                labels: {
+                  font: {
+                    family: "'Montserrat', sans-serif",
+                    size: 12,
+                  },
+                  padding: 20,
+                },
+              },
+              title: {
+                display: true,
+                text: "Tình hình nhập học - tốt nghiệp trong những năm gần đây",
+                font: {
+                  family: "'Montserrat', sans-serif",
+                  size: 16,
+                  weight: "bold",
+                },
+                padding: {
+                  bottom: 20,
+                },
+              },
+              datalabels: {
+                anchor: "end",
+                align: "top",
+                color: "#222",
+                font: {
+                  family: "'Montserrat', sans-serif",
+                  weight: "bold",
+                  size: 13,
+                },
+                formatter: (value) => value,
+              },
+            },
+            scales: {
+              x: {
+                grid: {
+                  display: false,
+                },
+                ticks: {
+                  font: {
+                    family: "'Montserrat', sans-serif",
+                    size: 11,
+                  },
+                },
+              },
+              y: {
+                grid: {
+                  color: "#E5E5E5",
+                },
+                ticks: {
+                  font: {
+                    family: "'Montserrat', sans-serif",
+                    size: 11,
+                  },
+                },
+              },
+            },
+          },
+          plugins: [window.ChartDataLabels],
+        });
+    }
+}

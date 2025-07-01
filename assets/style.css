@@ -1660,3 +1660,33 @@
     background: linear-gradient(135deg, #1e40af 60%, #0ea5e9 100%);
     transform: translateY(-4px) scale(1.08);
 }
+
+/* Dashboard Charts */
+.dashboard-charts {
+    background: #fff;
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.chart-container {
+    position: relative;
+    height: 300px;
+    width: 100%;
+}
+
+@media (max-width: 768px) {
+    .chart-container {
+        height: 250px;
+    }
+}
+
+@media (max-width: 576px) {
+    .chart-container {
+        height: 200px;
+    }
+    
+    .dashboard-charts {
+        padding: 15px;
+    }
+}
