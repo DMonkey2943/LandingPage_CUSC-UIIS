@@ -679,7 +679,7 @@ p {
 
 .chart-container {
   position: relative;
-  height: 300px;
+  height: 350px;
   width: 100%;
 }
 
@@ -1469,7 +1469,7 @@ p {
   }
 
   .chart-container {
-    height: 250px;
+    height: 300px;
   }
 
   .achievement-card {
@@ -1555,10 +1555,6 @@ p {
 
   .hero-subtitle {
     font-size: 1.25rem;
-  }
-
-  .chart-container {
-    height: 200px;
   }
 
   .dashboard-charts {
