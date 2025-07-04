@@ -683,6 +683,10 @@ function initDashboardCharts() {
                 family: "'Roboto', sans-serif",
                 size: 11,
               },
+              callback: function(value) {
+                // Hiển thị số với dấu chấm phân tách hàng nghìn
+                return value.toLocaleString('vi-VN');
+              },
             },
           },
         },
